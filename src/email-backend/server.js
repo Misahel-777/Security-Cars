@@ -23,6 +23,8 @@ app.use(express.json()); // Habilita el parser de JSON para que el servidor pued
 // EMAIL_PASS=tu_contraseña_de_aplicación_o_contraseña_normal (para Gmail, es una contraseña de aplicación)
 const transporter = nodemailer.createTransport({
     service: 'gmail', // Por ejemplo, 'gmail', 'Outlook365', etc.
+    port: 465, // Puerto para conexiones seguras (SSL)
+    secure: true, // Usa TLS para conexiones seguras
     auth: {
         user: process.env.EMAIL_USER, // Tu dirección de correo electrónico remitente
         pass: process.env.EMAIL_PASS // Tu contraseña de correo electrónico (o contraseña de aplicación si usas Gmail)
@@ -46,7 +48,7 @@ app.post('/send-email', async (req, res) => {
         // Opciones del correo electrónico
         const mailOptions = {
             from: process.env.EMAIL_USER, // Tu dirección de correo electrónico remitente
-            to: 'tu_correo_destino@example.com', // **CAMBIA ESTO** al correo donde quieres recibir los datos
+            to: process.env.EMAIL_USER, // **CAMBIA ESTO** al correo donde quieres recibir los datos
             subject: `Nueva Consulta de ${name} - ${service}`, // Asunto del correo
             html: `
                 <h2>Nueva Consulta de Cliente</h2>
