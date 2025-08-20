@@ -37,7 +37,7 @@ const ContactSection = () => {
       // Enviar los datos del formulario a tu API backend
       // ASEGÚRATE de cambiar 'http://localhost:3001/send-email' por la URL real de tu servidor.
       // Si el backend está en el mismo dominio pero en una ruta diferente, podría ser '/send-email'.
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch('https://security-cars-us9p.onrender.com/send-email', {
         method: 'POST', // Método HTTP POST para enviar datos
         headers: {
           'Content-Type': 'application/json', // Indicar que el cuerpo de la solicitud es JSON
