@@ -10,6 +10,7 @@ import ContactSection from './components/ContactSection.jsx'
 import SeccionFaq from './components/SeccionFaq.jsx'
 import Footer from './components/Footer.jsx'
 import Testimonials from './components/Testimonials.jsx'
+import WhatsApp from './components/whatsapp.jsx'
 
 // Componente principal de la aplicación
 function App() {
@@ -30,6 +31,7 @@ function App() {
       
       {/* Pie de página */}
       <Footer />
+      <WhatsApp />
     </div>
   )
 }

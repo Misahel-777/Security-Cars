@@ -1,30 +1,30 @@
 // Importación de iconos de Lucide React
-import { Shield, Users, Award, Clock } from 'lucide-react'
+import { LuShield, LuUsers, LuAward, LuClock } from 'react-icons/lu'
 
 // Componente AboutSection - Sección "Quiénes Somos"
 const AboutSection = () => {
   // Datos de estadísticas
   const stats = [
     {
-      icon: Users,
+      icon: LuUsers,
       number: "500+",
       label: "Clientes Satisfechos",
       description: "Familias que confían en nosotros"
     },
     {
-      icon: Shield,
+      icon: LuShield,
       number: "100%",
       label: "Instalaciones Exitosas",
       description: "Garantía en cada trabajo"
     },
     {
-      icon: Award,
+      icon: LuAward,
       number: "5+",
       label: "Años de Experiencia",
       description: "Especializados en seguridad vehicular"
     },
     {
-      icon: Clock,
+      icon: LuClock,
       number: "24/7",
       label: "Monitoreo Continuo",
       description: "Protección sin descanso"
@@ -102,7 +102,7 @@ const AboutSection = () => {
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="text-center space-y-4">
                 <div className="bg-[#001d8b]/10 p-4 rounded-full w-20 h-20 mx-auto flex items-center justify-center">
-                  <Shield className="h-10 w-10 text-[#001d8b]" />
+                  <LuShield className="h-10 w-10 text-[#001d8b]" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">
                   Compromiso con tu Seguridad: Instalación Garantizada de Sistemas Anti-Robo
@@ -121,25 +121,25 @@ const AboutSection = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <div className="bg-[#001d8b]/10 p-2 rounded-full">
-                    <Shield className="h-4 w-4 text-[#001d8b]" />
+                    <LuShield className="h-4 w-4 text-[#001d8b]" />
                   </div>
                   <span className="text-gray-700">Instalación profesional con garantía real</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="bg-[#001d8b]/10 p-2 rounded-full">
-                    <Award className="h-4 w-4 text-[#001d8b]" />
+                    <LuAward className="h-4 w-4 text-[#001d8b]" />
                   </div>
                   <span className="text-gray-700">Tecnología moderna y confiable</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="bg-[#001d8b]/10 p-2 rounded-full">
-                    <Users className="h-4 w-4 text-[#001d8b]" />
+                    <LuUsers className="h-4 w-4 text-[#001d8b]" />
                   </div>
                   <span className="text-gray-700">Atención personalizada y seguimiento</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="bg-[#001d8b]/10 p-2 rounded-full">
-                    <Clock className="h-4 w-4 text-[#001d8b]" />
+                    <LuClock className="h-4 w-4 text-[#001d8b]" />
                   </div>
                   <span className="text-gray-700">Soporte técnico cuando lo necesites</span>
                 </div>

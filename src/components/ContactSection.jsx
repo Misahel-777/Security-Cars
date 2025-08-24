@@ -2,15 +2,16 @@
 import { useState } from 'react'
 
 // Importación de iconos de Lucide React
-import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle, XCircle } from 'lucide-react'
+import { LuPhone, LuMail, LuMapPin, LuClock, LuMessageCircle, LuSend } from 'react-icons/lu'
+import { GoCheckCircle, GoXCircle } from "react-icons/go";
 
 // Componente ContactSection - Sección de contacto
 const ContactSection = () => {
   // Estado del formulario
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
-    email: '',
+    LuPhone: '',
+    eLuMail: '',
     service: '',
     message: ''
   })
@@ -35,9 +36,9 @@ const ContactSection = () => {
 
     try {
       // Enviar los datos del formulario a tu API backend
-      // ASEGÚRATE de cambiar 'http://localhost:3001/send-email' por la URL real de tu servidor.
-      // Si el backend está en el mismo dominio pero en una ruta diferente, podría ser '/send-email'.
-      const response = await fetch('https://security-cars-us9p.onrender.com/send-email', {
+      // ASEGÚRATE de cambiar 'http://localhost:3001/LuSend-eLuMail' por la URL real de tu servidor.
+      // Si el backend está en el mismo dominio pero en una ruta diferente, podría ser '/LuSend-eLuMail'.
+      const response = await fetch('https://security-cars-us9p.onrender.com/LuSend-eLuMail', {
         method: 'POST', // Método HTTP POST para enviar datos
         headers: {
           'Content-Type': 'application/json', // Indicar que el cuerpo de la solicitud es JSON
@@ -51,8 +52,8 @@ const ContactSection = () => {
         // Resetear formulario después de un envío exitoso
         setFormData({
           name: '',
-          phone: '',
-          email: '',
+          LuPhone: '',
+          eLuMail: '',
           service: '',
           message: ''
         })
@@ -73,25 +74,25 @@ const ContactSection = () => {
   // Información de contacto
   const contactInfo = [
     {
-      icon: Phone,
+      icon: LuPhone,
       title: "Teléfono",
       content: "+51 999 888 777",
       description: "Llámanos para consultas inmediatas"
     },
     {
-      icon: Mail,
-      title: "Email",
+      icon: LuMail,
+      title: "ELuMail",
       content: "info@securitycarsimport.com",
       description: "Envíanos tu consulta por correo"
     },
     {
-      icon: MapPin,
+      icon: LuMapPin,
       title: "Ubicación",
       content: "Lima, Perú",
       description: "Servicio a domicilio disponible"
     },
     {
-      icon: Clock,
+      icon: LuClock,
       title: "Horarios",
       content: "Lun - Sáb: 8:00 AM - 6:00 PM",
       description: "Emergencias 24/7"
@@ -138,7 +139,7 @@ const ContactSection = () => {
             {/* Mensaje motivacional */}
             <div className="bg-[#001d8b]/5 border border-[#001d8b]/20 rounded-lg p-6">
               <div className="flex items-center space-x-3 mb-4">
-                <MessageCircle className="h-6 w-6 text-[#001d8b]" />
+                <LuMessageCircle className="h-6 w-6 text-[#001d8b]" />
                 <h4 className="text-lg font-semibold text-gray-900">¿Por qué contactarnos?</h4>
               </div>
               <div className="space-y-3 mb-6">
@@ -186,7 +187,7 @@ const ContactSection = () => {
               {/* Mensajes de éxito/error */}
               {message && (
                 <div className={`p-4 rounded-lg flex items-center space-x-3 ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-                  {message.type === 'success' ? <CheckCircle className="h-5 w-5" /> : <XCircle className="h-5 w-5" />}
+                  {message.type === 'success' ? <GoCheckCircle className="h-5 w-5" /> : <GoXCircle className="h-5 w-5" />}
                   <p className="font-medium">{message.text}</p>
                 </div>
               )}
@@ -210,15 +211,15 @@ const ContactSection = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-lg font-medium text-gray-700 mb-2">
+                  <label htmlFor="LuPhone" className="block text-lg font-medium text-gray-700 mb-2">
                     Teléfono *
                   </label>
                   <input
-                    id="phone"
-                    name="phone"
+                    id="LuPhone"
+                    name="LuPhone"
                     type="tel"
                     required
-                    value={formData.phone}
+                    value={formData.LuPhone}
                     onChange={handleInputChange}
                     placeholder="999 888 777"
                     className="w-full placeholder-black/70 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#001d8b] focus:border-transparent"
@@ -226,18 +227,18 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Email */}
+              {/* ELuMail */}
               <div>
-                <label htmlFor="email" className="block text-lg font-medium text-gray-700 mb-2">
-                  Email
+                <label htmlFor="eLuMail" className="block text-lg font-medium text-gray-700 mb-2">
+                  ELuMail
                 </label>
                 <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
+                  id="eLuMail"
+                  name="eLuMail"
+                  type="eLuMail"
+                  value={formData.eLuMail}
                   onChange={handleInputChange}
-                  placeholder="tu@email.com"
+                  placeholder="tu@eLuMail.com"
                   className="w-full placeholder-black/70 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#001d8b] focus:border-transparent"
                 />
               </div>
@@ -292,7 +293,7 @@ const ContactSection = () => {
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
                 ) : (
-                  <Send className="h-5 w-5" />
+                  <LuSend className="h-5 w-5" />
                 )}
                 <span>{loading ? 'Enviando...' : 'Enviar Consulta'}</span>
               </button>
@@ -301,25 +302,6 @@ const ContactSection = () => {
                 * Campos obligatorios. Te contactaremos en menos de 24 horas.
               </p>
             </form>
-          </div>
-        </div>
-
-        {/* Llamada a la acción final */}
-        <div className="mt-16 text-center bg-[#001d8b]/5 p-8 rounded-2xl">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            ¿Necesitas Atención Inmediata?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Para emergencias o consultas urgentes, contáctanos directamente
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              className=" bg-green-500 text-white hover:bg-green-600 hover:text-white px-25 py-8 rounded-lg transition-colors flex items-center justify-center space-x-4"
-              onClick={() => window.open('https://wa.me/51999888777')}
-            >
-              <MessageCircle className="h-7 w-7" />
-              <span className='text-xl'>WhatsApp</span>
-            </button>
           </div>
         </div>
       </div>

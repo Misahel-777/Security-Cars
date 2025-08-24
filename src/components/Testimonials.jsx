@@ -1,5 +1,4 @@
-import React from 'react';
-import { Star, Quote, Shield, CheckCircle } from 'lucide-react';
+import { FaStar } from 'react-icons/fa';
 
 const Testimonials = () => {
   const testimonials = [
@@ -55,7 +54,7 @@ const Testimonials = () => {
 
                {/* Rating */}
                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => ( <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />))}
+                  {[...Array(testimonial.rating)].map((_, i) => ( <FaStar key={i} className="h-5 w-5 text-yellow-400 fill-current" />))}
                </div>
 
                {/* Testimonial Text */}

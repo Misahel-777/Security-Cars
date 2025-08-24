@@ -1,5 +1,5 @@
 // Importación de iconos de Lucide React
-import { Shield, Smartphone, Car } from 'lucide-react'
+import { LuShield, LuSmartphone, LuCar } from 'react-icons/lu'
 
 // Componente HeroSection - Sección principal de la página
 const HeroSection = () => {
@@ -32,7 +32,7 @@ const HeroSection = () => {
                 GPS para Auto, Alarmas con App y Antiasalto: Control Total desde tu Celular
               </h3>
               <h3 className="text-xl font-medium text-[#001d8b]">
-                Tu Patrimonio Seguro: Rastreador GPS y Alarmas para Carros en Lima
+                Tu Patrimonio Seguro: Rastreador GPS y Alarmas para LuCarros en Lima
               </h3>
             </div>
 
@@ -40,7 +40,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="bg-[#001d8b]/10 p-3 rounded-lg w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                  <Shield className="h-8 w-8 text-[#001d8b]" />
+                  <LuShield className="h-8 w-8 text-[#001d8b]" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-1">Seguridad Total</h3>
                 <p className="text-gray-600 text-sm">Protección 24/7</p>
@@ -48,7 +48,7 @@ const HeroSection = () => {
               
               <div className="text-center">
                 <div className="bg-[#001d8b]/10 p-3 rounded-lg w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                  <Smartphone className="h-8 w-8 text-[#001d8b]" />
+                  <LuSmartphone className="h-8 w-8 text-[#001d8b]" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-1">Control Total</h3>
                 <p className="text-gray-600 text-sm">Desde tu celular</p>
@@ -56,7 +56,7 @@ const HeroSection = () => {
               
               <div className="text-center">
                 <div className="bg-[#001d8b]/10 p-3 rounded-lg w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                  <Car className="h-8 w-8 text-[#001d8b]" />
+                  <LuCar className="h-8 w-8 text-[#001d8b]" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-1">Tu Patrimonio</h3>
                 <p className="text-gray-600 text-sm">Siempre protegido</p>
@@ -84,14 +84,14 @@ const HeroSection = () => {
           <div className="relative">
             <div className="bg-[#001d8b]/5 rounded-2xl p-8 text-center">
               <div className="bg-white p-6 rounded-full w-32 h-32 mx-auto mb-6 flex items-center justify-center shadow-lg">
-                <Shield className="h-16 w-16 text-[#001d8b]" />
+                <LuShield className="h-16 w-16 text-[#001d8b]" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Tecnología Avanzada</h2>
               <p className="text-gray-600 mb-6">GPS • Alarmas • Anti-asalto</p>
               <div className="flex justify-center space-x-4">
-                <Smartphone className="h-8 w-8 text-[#001d8b]" />
-                <Shield className="h-8 w-8 text-[#001d8b]" />
-                <Car className="h-8 w-8 text-[#001d8b]" />
+                <LuSmartphone className="h-8 w-8 text-[#001d8b]" />
+                <LuShield className="h-8 w-8 text-[#001d8b]" />
+                <LuCar className="h-8 w-8 text-[#001d8b]" />
               </div>
             </div>
           </div>

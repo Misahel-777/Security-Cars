@@ -1,5 +1,6 @@
 // Importación de iconos de Lucide React
-import { Shield, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react'
+import { LuShield, LuPhone, LuMail, LuMapPin } from 'react-icons/lu'
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 // Componente Footer - Pie de página
 const Footer = () => {
@@ -22,7 +23,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <div className="bg-primary p-2 rounded-lg">
-                <Shield className="h-8 w-8 text-white" />
+                <LuShield className="h-8 w-8 text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-bold">Security Cars Import</h3>
@@ -99,7 +100,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Contacto</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-primary" />
+                <LuPhone className="h-5 w-5 text-primary" />
                 <div>
                   <p className="text-white font-medium">+51 999 888 777</p>
                   <p className="text-gray-400 text-sm">Lun - Sáb: 8:00 AM - 6:00 PM</p>
@@ -107,7 +108,7 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-primary" />
+                <LuMail className="h-5 w-5 text-primary" />
                 <div>
                   <p className="text-white font-medium">info@securitycarsimport.com</p>
                   <p className="text-gray-400 text-sm">Respuesta en 24 horas</p>
@@ -115,7 +116,7 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-primary" />
+                <LuMapPin className="h-5 w-5 text-primary" />
                 <div>
                   <p className="text-white font-medium">Lima, Perú</p>
                   <p className="text-gray-400 text-sm">Servicio a domicilio</p>
@@ -130,23 +131,23 @@ const Footer = () => {
                 <a 
                   href="#" 
                   className="bg-gray-800 p-2 rounded-lg hover:bg-primary transition-colors"
-                  aria-label="Facebook"
+                  aria-label="FaFacebook"
                 >
-                  <Facebook className="h-5 w-5" />
+                  <FaFacebook className="h-5 w-5" />
                 </a>
                 <a 
                   href="#" 
                   className="bg-gray-800 p-2 rounded-lg hover:bg-primary transition-colors"
-                  aria-label="Instagram"
+                  aria-label="FaInstagram"
                 >
-                  <Instagram className="h-5 w-5" />
+                  <FaInstagram className="h-5 w-5" />
                 </a>
                 <a 
                   href="#" 
                   className="bg-gray-800 p-2 rounded-lg hover:bg-primary transition-colors"
-                  aria-label="YouTube"
+                  aria-label="FaYoutube"
                 >
-                  <Youtube className="h-5 w-5" />
+                  <FaYoutube className="h-5 w-5" />
                 </a>
               </div>
             </div>

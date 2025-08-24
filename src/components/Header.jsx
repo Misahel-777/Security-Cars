@@ -2,12 +2,12 @@
 import { useState } from 'react'
 
 // Importación de iconos de Lucide React
-import { Shield, Menu, X } from 'lucide-react'
+import { LuShield, LuMenu, LuX } from 'react-icons/lu'
 
 // Componente Header - Navegación principal
 const Header = () => {
   // Estado para controlar el menú móvil
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileLuMenuOpen, setIsMobileLuMenuOpen] = useState(false)
 
   // Función para scroll suave a secciones
   const scrollToSection = (sectionId) => {
@@ -15,12 +15,12 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
-    setIsMobileMenuOpen(false) // Cerrar menú móvil después de navegar
+    setIsMobileLuMenuOpen(false) // Cerrar menú móvil después de navegar
   }
 
   // Función para alternar menú móvil
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
+  const toggleMobileLuMenu = () => {
+    setIsMobileLuMenuOpen(!isMobileLuMenuOpen)
   }
 
   return (
@@ -30,7 +30,7 @@ const Header = () => {
           {/* Logo y nombre de la empresa */}
           <div className="flex items-center space-x-3">
             <div className="bg-[#001d8b] p-2 rounded-lg">
-              <Shield className="h-6 w-6 text-white" />
+              <LuShield className="h-6 w-6 text-white" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Security Cars Import</h1>
@@ -76,19 +76,19 @@ const Header = () => {
 
           {/* Botón menú móvil */}
           <button 
-            onClick={toggleMobileMenu}
+            onClick={toggleMobileLuMenu}
             className="md:hidden p-2"
           >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
+            {isMobileLuMenuOpen ? (
+              <LuX className="h-6 w-6 text-gray-700" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
+              <LuMenu className="h-6 w-6 text-gray-700" />
             )}
           </button>
         </div>
 
         {/* Menú móvil */}
-        {isMobileMenuOpen && (
+        {isMobileLuMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
               <button 
