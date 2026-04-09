@@ -26,7 +26,7 @@ export default function Footer() {
 
         {/* SERVICIOS */}
         <div>
-          <h3 className="font-bold mb-4">Servicios</h3>
+          <h5 className="font-bold mb-4">Servicios</h5>
           <ul className="space-y-2 text-sm">
             <li><Link href="/servicios">Cámaras de retroceso</Link></li>
             <li><Link href="/servicios">Sensores de estacionamiento</Link></li>
@@ -38,7 +38,7 @@ export default function Footer() {
 
         {/* NAVEGACIÓN */}
         <div>
-          <h3 className="font-bold mb-4">Navegación</h3>
+          <h5 className="font-bold mb-4">Navegación</h5>
           <ul className="space-y-2 text-sm">
             <li><Link href="/#inicio">Inicio</Link></li>
             <li><Link href="/servicios">Servicios</Link></li>
@@ -50,7 +50,7 @@ export default function Footer() {
 
         {/* CONTACTO */}
         <div>
-          <h3 className="font-bold mb-4">Contacto</h3>
+          <h5 className="font-bold mb-4">Contacto</h5>
 
           <div className="space-y-3 text-sm">
             <div className="flex items-center gap-3">

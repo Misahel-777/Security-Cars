@@ -8,7 +8,7 @@ return (
         <div className="max-w-7xl w-full flex flex-col lg:flex-row gap-10 items-center">
           <article className="flex-1">
             <header>
-              <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-black mb-4">PROTEGE TU HERRAMIENTA DE TRABAJO: SEGURIDAD <br /><span className="text-[#0445ec]">REAL Y AL ALCANCE</span></h2>
+              <h3 className="text-3xl md:text-4xl lg:text-4xl font-bold text-black mb-4">PROTEGE TU HERRAMIENTA DE TRABAJO: SEGURIDAD <br /><span className="text-[#0445ec]">REAL Y AL ALCANCE</span></h3>
             <p className="text-black mb-6 text-lg leading-relaxed">
               Sabemos cuánto te ha costado tener tu carrito. Tu auto es tu
               patrimonio y no podemos dejar que nadie te lo quite.

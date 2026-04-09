@@ -3,38 +3,40 @@ import Link from "next/link";
 
 export default function Services() {
   const servicios = [
-    { id: 1, imagen: "/camara.png", titulo: "Alarmas para auto", href: "/servicios/alarmas" },
-    { id: 2, imagen: "/GPSservice.webp", titulo: "GPS para auto", href: "/servicios/gps" },
-    { id: 3, imagen: "/camara.png", titulo: "Antiasalto para auto", href: "/servicios/antiasalto" },
+    { id: 1, imagen: "/GPSservice.webp", titulo: "Alarmas para vehículos", href: "/servicios/alarmas" },
+    { id: 2, imagen: "/GPSservice.webp", titulo: "GPS para vehículos", href: "/servicios/gps" },
+    { id: 3, imagen: "/GPSservice.webp", titulo: "Antiasalto para auto", href: "/servicios/antiasalto" },
   ];
 
   return (
     <>
       {/* SERVICIOS PRINCIPALES */}
       <section id="servicios" className="py-5 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <header>
-            <h3 className="titulos">Nuestros Servicios</h3>
-          </header>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+  {servicios.map((servicio) => (
+    <article key={servicio.id} className="flex flex-col">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {servicios.map((servicio) => (
-              <article key={servicio.id}>
-                <figure className="relative max-w-lg">
-                  <Image src={servicio.imagen} alt={`Servicio de ${servicio.titulo}`} width={400} height={200} className="object-contain  bg-gray-300 rounded-xl"/>
-                </figure>
-                <div className="pt-4">
-                  <header>
-                    <h2 className="text-lg text-black font-medium mb-3">{servicio.titulo}</h2>
-                  </header>
-                  <Link href={servicio.href} className="button w-full text-center">
-                    Más información
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+      {/* CONTENEDOR FIJO */}
+      <figure className="relative rounded-xl overflow-hidden flex items-center justify-center">
+        <Image src={servicio.imagen} alt={`Servicio de ${servicio.titulo}`} width={450} height={230} className="object-contain"/>
+      </figure>
+      <div className="pt-4 flex flex-col">
+        <header>
+          <h2 className="text-lg text-black font-medium mb-3">
+            {servicio.titulo}
+          </h2>
+        </header>
+
+        <Link
+          href={servicio.href}
+          className="button w-full text-center mt-auto"
+        >
+          Más información
+        </Link>
+      </div>
+    </article>
+  ))}
+</div>
 
         {/* VER MÁS */}
         <div className="max-w-7xl mx-auto pt-20 pb-5 px-4 text-center">
@@ -55,9 +57,9 @@ export default function Services() {
 
             <div className="cuadro2">
               <header>
-                <h2 className="cuadro-h2">Reparación y/o Instalación de Alzavidrios Eléctricos</h2>
+                <span className="cuadro-h2">Reparación y/o Instalación de</span><h2 className="cuadro-h2">Alzavidrios Eléctricos</h2>
               </header>
-              <p className="text-gray-700">Servicio especializado en reparación e instalación de sistemas de alzavidrios eléctricos para todo tipo de vehículo.</p>
+              <p className="text-gray-700">Servicio especializado en reparación e <strong>instalación de vidrios eléctricos para carro.</strong></p>
               <Link href="/servicios/alzavidrios" className="button bg-[#0445ec]">
                 Más información
               </Link>
@@ -71,9 +73,9 @@ export default function Services() {
             </figure>
             <div className="cuadro2">
               <header>
-                <h2 className="cuadro-h2">Reparación y/o Instalación de Pestillos Eléctricos</h2>
+                <span className="cuadro-h2">Reparación y/o Instalación de</span><h2 className="cuadro-h2">Pestillos Eléctricos</h2>
               </header>
-              <p className="text-gray-700">Servicio especializado en reparación e instalación de pestillos eléctricos con garantía y diagnóstico profesional.</p>
+              <p className="text-gray-700">Servicio especializado en reparación e <strong>instalación de pestillos eléctricos para autos.</strong></p>
               <Link href="/servicios/pestillos" className="button bg-[#0445ec]">
                 Más información
               </Link>

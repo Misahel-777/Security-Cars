@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import {ChevronDown} from 'lucide-react';
+
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 const whatsappText = encodeURIComponent(
@@ -151,31 +153,21 @@ const faqs = [
 
 
 
-          <section className="py-24 max-w-3xl mx-auto px-6">
-      
-      <h2 className="text-3xl font-bold text-center mb-12">
-        Preguntas Frecuentes
-      </h2>
 
-      <div className="space-y-4">
-        {faqs.map((f, i) => (
-          <details key={i} className="group bg-gray-100 rounded-xl overflow-hidden">
-            <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-              {/* TEXTO */}
-              <span className="font-bold text-gray-800">
-                {f.q}
-              </span>
-              {/* ICONO DERECHA */}
-              <span className="transition-transform duration-300 group-open:rotate-180">
-                ▼
-              </span>
-            </summary>
-            <div className="px-6 pb-6 text-gray-600">
-              {f.a}
+
+        <section className="py-24 max-w-4xl mx-auto px-6">
+        <div className="container mx-auto px-4">
+            <h3 className="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h3>
+            <div className="space-y-4">{faqs.map((f, i) => (
+                <details key={i}className="details group">
+                    <summary className="flex justify-between p-6 items-center cursor-pointer text-black font-medium list-none">
+                        {f.q}
+                        <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <div className="px-6 pb-4 text-gray-700">{f.a}</div>
+                </details>))}
             </div>
-          </details>
-        ))}
-      </div>
+        </div>
     </section>
     </>
   );

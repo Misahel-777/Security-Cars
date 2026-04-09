@@ -5,7 +5,7 @@ const trabajos = [
     image: "/trabajo1.webp", title: "Reparación de pestillos eléctricos en Toyota Corolla 2015"
   },
   {
-    image: "/trabajo3.webp", title: "Instalación de cierre centralizado universal en Ford Fiesta 2010"
+    image: "/", title: "Instalación de cierre centralizado universal en Ford Fiesta 2010"
   },
     {
     image: "/trabajo2.webp", title: "Reparación de alzavidrios eléctricos en Honda Civic 2012"

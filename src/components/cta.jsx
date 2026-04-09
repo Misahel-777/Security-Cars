@@ -55,7 +55,7 @@ export default function ContactSection() {
 
               <div className="relative z-10 w-full max-w-md">
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold mb-2">Atención Personalizada</h3>
+                  <h4 className="text-2xl font-bold mb-2">Atención Personalizada</h4>
                 </div>
 
             {/* BOTÓN WHATSAPP */}

@@ -3,7 +3,6 @@
 import { useState, useRef } from 'react';
 import { X } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
@@ -331,7 +330,7 @@ export default function ServicesPage() {
             {services.map((service) => (
               <article key={service.id} className="group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 bg-white" onClick={() => setSelectedService(service)}>
                 <figure className="relative h-48 overflow-hidden">
-                  <Image src={service.image} alt={service.title} fill className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+                  <Image src={service.image} alt={service.title} width={400} height={200} className="object-cover transition-transform duration-500 group-hover:scale-105"/>
                 </figure>
                 <header className="p-6 text-center w-full">
                   <h2 className="font-bold text-lg text-black">{service.title}</h2>
