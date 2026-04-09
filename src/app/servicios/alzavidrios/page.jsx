@@ -131,24 +131,26 @@ export default function ServicePage() {
       </section>
       
       {/* SERVICIOS */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white px-4">
+        <div className="max-w-7xl mx-auto">
         <header className="text-center mb-12">
           <h3 className="text-3xl font-bold">Lo que incluye el servicio</h3>
           </header>
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6">
           {service.services.map((s, i) => (
-            <div key={i} className="p-6 rounded-xl shadow-lg">
-              <s.icon className="text-[#0343eb] mb-4" />
-              <h2 className="font-bold">{s.title}</h2>
-              <p className="text-gray-600">{s.description}</p>
+            <div key={i} className="p-6 rounded-xl shadow-lg hover:-translate-y-1 transition bg-gray-50">
+              <s.icon className="text-[#0343eb] mb-3 w-6 h-6" />
+              <h2 className="font-bold mb-2">{s.title}</h2>
+              <p className="text-gray-600 text-sm">{s.description}</p>
             </div>
           ))}
+        </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0343eb] text-white py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">
+      <section className="bg-[#0343eb] text-white py-16 m-8 flex gap-20 w-2xl items-center mx-auto justify-center rounded-4xl text-center">
+        <h2 className="text-3xl font-bold">
           ¿Necesitas ayuda?
         </h2>
 

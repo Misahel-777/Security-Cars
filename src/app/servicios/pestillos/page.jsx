@@ -73,9 +73,9 @@ const whatsappText = encodeURIComponent(
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 
   return (
-    <main className="bg-gray-50">
+    <main >
       {/* HERO */}
-      <section className="bg-linear-to-r from-[#0343eb] to-[#0343eb]/80 text-white py-25 px-4">
+      <section className="bg-linear-to-r from-[#0343eb] to-[#0343eb]/80 text-white py-14 px-4">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <header>
@@ -140,8 +140,8 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0343eb] text-white text-center py-16">
-        <h2 className="text-3xl font-bold mb-6">¿Necesitas ayuda?</h2>
+      <section className="bg-[#0343eb] text-white text-center py-16 m-8 flex gap-20 w-2xl items-center mx-auto justify-center rounded-4xl">
+        <h2 className="text-3xl font-bold">¿Necesitas ayuda?</h2>
         <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
           <button className="bg-green-500 px-10 py-4 text-[18px] rounded-lg font-bold cursor-pointer">
             Contactar ahora
