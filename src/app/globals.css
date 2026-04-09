@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+  body {
+  font-family: var(--font-rubik), sans-serif;
+}
+
+html, body {
+    height: 100dvh;
+}
+
+
+@layer components {
+  .nav-link {
+    @apply px-3 py-2 text-[18px] font-medium text-black;
+}
+.service1 {
+  @apply px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8 
+}
+.service2 {
+  @apply px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row-reverse items-center gap-8
+}
+.details {
+  @apply bg-white border border-gray-300 rounded-lg overflow-hidden 
+}
+.summary {
+  @apply w-full px-6 py-4 flex justify-between items-center cursor-pointer text-black font-medium list-none
+}
+.button {
+  @apply bg-[#0445ec] text-white hover:bg-[#0446ecc6] text-[13px] sm:text-[16px] px-5 py-3 sm:px-9 sm:py-4 rounded-lg font-semibold inline-block transition-all duration-300
+}
+.button2 {
+  @apply bg-[#00C715] hover:bg-[#00c714c6] text-white text-[13px] sm:text-[16px] px-5 py-3 sm:px-9 sm:py-4  rounded-lg font-semibold inline-block transition-all duration-300
+}
+.cuadro {
+  @apply w-full md:w-1/2
+}
+.cuadro2 {
+  @apply w-full md:w-1/2 space-y-4
+}
+.cuadro-h2 {
+  @apply text-2xl text-black md:text-3xl font-bold
+}
+.titulos {
+  @apply text-[40px] text-black font-medium text-center mt-8 mb-15
+}
+
+.nuestros-trabajos {
+  @apply grid place-items-center lg:grid-cols-4 sm:grid-cols-2 gap-6 p-4 sm:p-6 lg:p-8
+}
+}
+
+  :root {
+    --hero-overlay: linear-gradient(
+      135deg,
+      hsla(0, 0%, 8%, 0.85) 0%,
+      hsla(0, 0%, 0%, 0.7) 100%
+      );
+
+      --gps-overlay: linear-gradient(
+        135deg,
+        hsla(0, 0%, 0%, 0.85) 100%,
+        hsla(0, 0%, 0%, 0.7) 100%
+      );
+  }
+
+
+.hero-overlay {
+  background: var(--hero-overlay);
+}
+
+.gps-overlay {
+  background: var(--gps-overlay);
+}
+
+
+
+/* globals.css */
+.line-clamp-3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, white);
+  pointer-events: none;
+}
+
+
+
+
