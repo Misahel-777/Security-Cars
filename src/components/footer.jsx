@@ -10,7 +10,7 @@ export default function Footer() {
   )}`;
 
   return (
-    <footer className="bg-[#0445ec] text-gray-300">
+    <footer className="bg-[#0445ec] text-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-10">
 
         {/* MARCA */}

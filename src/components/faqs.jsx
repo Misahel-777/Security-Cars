@@ -25,7 +25,7 @@ const faqs = [
 ];
 
 return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16">
         <div className="container mx-auto px-4">
             <h3 id="faq" className="titulos">Preguntas Frecuentes</h3>
             <div className="max-w-3xl mx-auto space-y-4">{faqs.map((item, index) => (

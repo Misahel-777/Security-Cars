@@ -8,10 +8,6 @@ body {
     margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
   body {
   font-family: var(--font-rubik), sans-serif;
 }
@@ -38,10 +34,10 @@ html, body {
   @apply w-full px-6 py-4 flex justify-between items-center cursor-pointer text-black font-medium list-none
 }
 .button {
-  @apply bg-[#0445ec] text-white hover:bg-[#0446ecc6] text-[13px] sm:text-[16px] px-5 py-3 sm:px-9 sm:py-4 rounded-lg font-semibold inline-block transition-all duration-300
+  @apply bg-[#0445ec] text-white hover:bg-[#0446ecc6] text-[17px] sm:text-[16px] px-5 py-3 sm:px-9 sm:py-4 rounded-lg font-semibold inline-block transition-all duration-300
 }
 .button2 {
-  @apply bg-[#00C715] hover:bg-[#00c714c6] text-white text-[13px] sm:text-[16px] px-5 py-3 sm:px-9 sm:py-4  rounded-lg font-semibold inline-block transition-all duration-300
+  @apply bg-[#00C715] hover:bg-[#00c714c6] text-white text-[17px] sm:text-[16px] px-5 py-3 sm:px-9 sm:py-4  rounded-lg font-semibold inline-block transition-all duration-300
 }
 .cuadro {
   @apply w-full md:w-1/2

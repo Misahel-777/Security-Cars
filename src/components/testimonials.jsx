@@ -16,11 +16,11 @@ export default function testimonials() {
 ];
 
 return (
-    <section id="testimonios" className="py-16 bg-white">
+    <section id="testimonios" className="py-16">
         <div className="container mx-auto px-4">
             <header><h3 className="titulos">Lo Que Dicen Nuestros Clientes</h3></header>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto text-center">{testimonials.map((testimonial, index) => (
-                    <article key={index} className="bg-gray-50 p-6 rounded-lg ">
+                    <article key={index} className=" p-6 rounded-lg ">
                         <blockquote className="text-gray-700 mb-6 italic">"{testimonial.text}"</blockquote>
                         <cite className="font-semibold text-black">{testimonial.name}</cite>
                     </article>))}

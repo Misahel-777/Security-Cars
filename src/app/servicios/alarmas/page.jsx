@@ -50,7 +50,7 @@ const getWhatsappLink = (producto) => {
 
   return (
 <>
-    <section className="relative h-[80vh] flex items-center">
+    <section className="relative h-[90vh] md:min-h-screen flex items-center">
 
       {/* Imagen */}
       <div className="absolute inset-0">
@@ -66,7 +66,7 @@ const getWhatsappLink = (producto) => {
     </section>
 
       {/* PRODUCTOS */}
-      <main className="py-16 bg-gray-100">
+      <main className="py-16">
         <div className="max-w-7xl mx-auto px-4 space-y-20">
           {productos.map((producto) => (
             <article key={producto.id} className="grid md:grid-cols-2 gap-10 items-start">
@@ -90,7 +90,7 @@ const getWhatsappLink = (producto) => {
                       Información Técnica
                     </p>
 
-                    <ul className="grid lg:grid-cols-4 grid-cols-2 gap-2">
+                    <ul className="grid lg:grid-cols-4 grid-cols-2 gap-2 mb-5">
                       {producto.informacion.map((info, index) => (
                         <li key={index} className="bg-gray-300 p-1 rounded-2xl flex items-center justify-center text-[12px] text-center min-h-[80px] max-h-[82px] overflow-hidden">{info.especificacion}</li>
                       ))}

@@ -56,7 +56,7 @@ const faqs = [
 ];
   return (
     <>
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative h-[90vh] md:min-h-screen flex items-center">
 
       {/* Imagen */}
       <div className="absolute inset-0">
@@ -107,7 +107,7 @@ const faqs = [
 
         {features.map((f, i) => (
           <article key={i}>
-                <div className="p-8 bg-gray-100 hover:bg-white transition border-l-2 hover:border-blue-600">
+                <div className="p-8 transition border-l-2 hover:border-blue-600">
       <h3 className="text-xl font-bold mb-2">{f.title}</h3>
       <p className="text-gray-600">{f.desc}</p>
     </div>
@@ -155,8 +155,8 @@ const faqs = [
 
 
 
-        <section className="py-24 max-w-4xl mx-auto px-6">
-        <div className="container mx-auto px-4">
+        <section className="py-24 max-w-4xl mx-auto px-2">
+        <div className="container mx-auto px-2">
             <h3 className="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h3>
             <div className="space-y-4">{faqs.map((f, i) => (
                 <details key={i}className="details group">
