@@ -21,37 +21,37 @@ export default function Hero() {
     desc: "Recibe una notificación instantánea apenas alguien intente encender tu motor sin tu permiso.",
   },
   {
-    title: "Geocercas de Seguridad",
-    desc: "Dibuja zonas seguras (como tu casa o trabajo) y recibe alertas si el auto sale de ese perímetro.",
+    title: "Multiples alarmas",
+    desc: "Te avisa a tu celular si golpean tu vehiculo, si violenta la chapa de encendido, si desconectan la bateria del vehiculo",
   },
   {
-    title: "Micrófono Espía (Opcional)",
-    desc: "Escucha lo que sucede dentro del habitáculo en tiempo real para verificar situaciones de emergencia.",
+    title: "GPS 4G FULL ",
+    desc: "Incluye ubicacion, apagado, multiples alarmas, por puerta, por accesorios, por desconeccion de bateria y (opcional: sirena y bloqueo lectronico)",
   },
 ];
 
 const stats = [
   { value: "+3000", label: "Vehículos" },
   { value: "+20", label: "Años" },
-  { value: "+1000", label: "Clientes" },
+  { value: "+4000", label: "Clientes" },
   { value: "24/7", label: "Soporte" },
 ];
 const faqs = [
   {
-    q: "¿Si cortan los cables del auto el GPS sigue funcionando?",
+    q: "¿Si desconectan los cables de la bateria del auto el GPS sigue funcionando?",
     a: "¡Claro que sí! Nuestros equipos cuentan con una batería interna de respaldo que mantiene el rastreo activo por varias horas aunque desconecten la batería principal.",
   },
   {
     q: "¿Instalar el GPS afecta la garantía de mi auto nuevo?",
-    a: "No. Realizamos instalaciones técnicas certificadas que no alteran el sistema eléctrico original del vehículo, manteniendo tu garantía intacta.",
+    a: "No. Realizamos instalaciones técnica especializada que no alteran el sistema eléctrico original del vehículo, manteniendo tu garantía intacta.",
   },
   {
-    q: "¿Hay que pagar una mensualidad?",
-    a: "El servicio incluye el acceso a la plataforma. Consultanos por nuestros planes económicos que incluyen el chip de datos con cobertura internacional.",
+    q: "¿Puedo tener varios vehículos bajo el mismo usuario del aplicativo?",
+    a: "Si, podra visualizar su flota de vehiculos desde el aplicativo, computadora o tablet",
   },
   {
-    q: "¿Funciona en sótanos o lugares cerrados?",
-    a: "Gracias a la tecnología de localización híbrida (LBS + GPS), podemos obtener una ubicación aproximada incluso si el vehículo está bajo techo.",
+    q: "¿El equipo es unico pago?",
+    a: "Si, el equipo es unico pago de por vida",
   },
 ];
   return (
@@ -85,7 +85,7 @@ const faqs = [
           </h2>
 
           <p className="mb-8 text-gray-600">
-            Las redes antiguas (2G y 3G) están dejando de funcionar en toda la región. Un GPS 4G no solo es más rápido; es la única forma de garantizar que la señal de tu auto no se pierda cuando más la necesites. Ya sea para proteger el auto de la familia o tu herramienta de trabajo, nuestra instalación profesional asegura precisión exacta incluso en zonas de difícil cobertura.
+            Las redes antiguas (2G y 3G) están dejando de funcionar en toda la región. Un GPS 4G no solo es más rápido; es la única forma de garantizar que la señal de tu auto no se pierda cuando más la necesites. Ya sea para proteger el auto de la familia o tu herramienta de trabajo.
           </p>
         </figure>
 
@@ -139,7 +139,7 @@ const faqs = [
           </h2>
 
           <p className="text-white/80 mb-2">
-            Nuestra aplicación es tan fácil de usar como mandar un mensaje de WhatsApp. Olvida comandos complicados por SMS; ahora puedes ver el historial de rutas, la velocidad actual y el estado del motor desde una interfaz intuitiva diseñada para tu comodidad y seguridad.
+            Nuestra aplicación es tan fácil de usar como mandar un mensaje de WhatsApp. Olvida comandos complicados por SMS; ahora puedes ver tu vehículo las 24 horas, la velocidad actual y el estado del motor, con nuestro sistema de GPS 4G Alsama podras tener un mayor control de tu flota de vehiculos.
           </p>
         </article>
 

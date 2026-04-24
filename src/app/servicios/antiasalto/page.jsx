@@ -13,46 +13,42 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 export default function Hero() {
 const features = [
   {
-    title: "Inmovilización Digital (CAN-BUS)",
-    desc: "Tecnología que dialoga con la ECU de tu auto sin realizar cortes de cables, protegiendo la integridad eléctrica y manteniendo la garantía de fábrica.",
+    title: "Inmovilización del vehiculo por estacionamiento",
+    desc: "Al momento de estacionar su vehiculo, el sistema se activa automáticamente despues del minuto y medio bloqueando el motor. Esto garantiza que incluso si un ladrón logra ingresar al vehículo, no podrá arrancarlo sin su autorización.",
   },
   {
-    title: "Protección Anti-Relay Attack",
-    desc: "Blindaje contra la clonación de llaves inteligentes y amplificadores de señal, neutralizando el método de robo más usado en vehículos modernos.",
+    title: "Protección modo anti a atraco",
+    desc: "Si lo bajan forzosamente del vehiculo, el ladron podra llevarse el vehiculo pero al minuto y medio se bloqueara el motor automoticamente, aumentando las posibilidades de recuperación y reduciendo el riesgo para el conductor.",
   },
-  {
-    title: "Protocolo de Apagado Progresivo",
-    desc: "Ante un asalto, el sistema permite que el delincuente se aleje para proteger tu vida, deteniendo el motor de forma segura y controlada a los pocos metros.",
-  },
-  {
+    {
     title: "Modo Valet Inteligente",
-    desc: "Entrega tu auto para mantenimiento sin revelar tus códigos de seguridad. El sistema permanece oculto y bajo tu control absoluto desde tu smartphone.",
+    desc: "Entrega tu auto para mantenimiento sin revelar tu sistema de seguridad. El sistema permanece oculto y bajo tu control absoluto y lo activas al momento de que usted sale del mantenimiento de su vehiculo",
+  },
+  {
+    title: "Bloqueo electronico con codigo (muy pronto)",
+    desc: "",
   },
 ];
 
 const stats = [
   { value: "+3000", label: "Vehículos" },
   { value: "+20", label: "Años" },
-  { value: "+1000", label: "Clientes" },
+  { value: "+4000", label: "Clientes" },
   { value: "24/7", label: "Soporte" },
 ];
 
 const faqs = [
   {
     q: "¿Afecta la garantía de mi auto nuevo?",
-    a: "No. Al utilizar tecnología digital que se integra al sistema CAN-BUS del vehículo, no realizamos intervenciones invasivas ni cortes de cables, lo que preserva la garantía oficial.",
+    a: "No. No afecta la garantia la instalacion se hace con tecnicos especializados.",
   },
   {
     q: "¿Es peligroso que el auto se detenga en marcha?",
     a: "En absoluto. El protocolo de apagado es progresivo y emite alertas sonoras previas, permitiendo una detención segura que prioriza tanto la seguridad vial como la integridad del conductor.",
   },
   {
-    q: "¿Qué sucede si pierdo mi smartphone o el tag de proximidad?",
-    a: "El sistema cuenta con un método de desactivación de emergencia mediante un código PIN único ingresado a través de los botones originales del tablero.",
-  },
-  {
-    q: "¿Funciona en vehículos híbridos o eléctricos?",
-    a: "Sí, es la única tecnología recomendada para EVs y motores híbridos, ya que bloquea el sistema de tracción mediante software sin afectar las baterías de alto voltaje.",
+    q: "¿Qué sucede si pierdo mi chip o control de proximidad?",
+    a: "El sistema cuenta con un método de desactivación de emergencia el cual el tecnico le va a enseñar a la hora de la instalacion.",
   },
 ];
 
@@ -69,7 +65,7 @@ const faqs = [
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="max-w-3xl text-white">
           <header><h1 className="text-5xl font-extrabold mb-6">Sistemas Antiasalto de Última Generación</h1>
-          <p className="text-xl mb-10">Implementamos protocolos de cortacorrientes invisibles que detienen el robo incluso con el motor en marcha</p>
+          <p className="text-xl mb-10">Implementamos sistema de antirobo</p>
           </header>
           <div className="flex gap-4 flex-col sm:flex-row">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">Hablar con el técnico</a>
@@ -83,11 +79,11 @@ const faqs = [
 
         <figure>
           <h2 className="text-4xl font-bold mb-6">
-            ¿Por qué tu alarma de fábrica ya no es suficiente?
+            ¿Por qué instalar un Anti asalto a tu vehículo?
           </h2>
 
           <p className="mb-8 text-gray-600">
-            Los delincuentes actuales utilizan inhibidores de señal (jammers) y amplificadores para vulnerar sistemas Keyless en segundos. Nuestra solución de "Seguridad Total por Capas" crea un firewall digital que protege el puerto OBD y bloquea cualquier intento de arranque no autorizado, garantizando que tu auto permanezca donde lo dejaste.
+            Este sistema es 100% efectivo ya que es sumamente discreto no hemite ningun sonido ni luz que delate su presencia.
           </p>
         </figure>
 

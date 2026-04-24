@@ -17,24 +17,36 @@ const productos = [
   {
     id: 2,
     titulo: "Alarma Full Plus",
-    descripcion: "Lleva la seguridad de tu auto al siguiente nivel. Además de las funciones básicas, este sistema cuenta con 'Anti-Asalto': si te obligan a bajar del vehículo, el motor se apaga automáticamente tras un minuto y medio. Incluye un código de seguridad único que impide el encendido incluso si logran robarte las llaves.",
+    descripcion: "Lleva la seguridad de tu auto al siguiente nivel. Además de las funciones básicas, este sistema cuenta con 'Anti-Asalto': si te obligan a bajar del vehículo, el motor se apaga automáticamente tras un minuto y medio. Este sistema tambien cuanta por un bloqueo de encendido por estacionamiento, a este sistema añadimos un código de seguridad único que impide el encendido del motor incluso si logran robarte las llaves.",
     imagen: "/integrada.png",
     informacion: [
-      { especificacion: "Sistema Anti-asalto inteligente." },
-      { especificacion: "Bloqueo de encendido." },
-      { especificacion: "Código de seguridad personalizado para el arranque." },
-      { especificacion: "Cierre centralizado automático al encender el vehículo." }
+      { especificacion: "Sistema Anti-asalto inteligente" },
+      { especificacion: "Bloqueo de encendido por estacionamiento" },
+      { especificacion: "Código de seguridad para el arranque" },
+      { especificacion: "Sistema de sonido inteligente" }
     ]
   },
   {
     id: 3,
-    titulo: "Alarma Integrada",
-    descripcion: "La máxima tecnología en seguridad invisible. Este sistema permite controlar todo el sistema desde el control original de tu auto. No necesitas controles extra; es la opción premium para quienes buscan mantener la estética original.",
+    titulo: "Alarma Básica Integrada",
+    descripcion: "Este modelo de alarma se acopla al control original del vehículo. Diseñada para vehículos sea con o sin  botón de encendido, Pero que si tenga su propio mando a distancia. ",
     imagen: "/integrada.png",
     informacion: [
-      { especificacion: "Control total mediante el mando original del vehículo." },
-      { especificacion: "Integración digital sin corte de cables." },
-      { especificacion: "Sensores de proximidad de alta precisión (Detección de 0.3 a 1.8m)." },
+      { especificacion: "Protección por apertura de puertas" },
+      { especificacion: "Protección por apertura de capó" },
+      { especificacion: "Sirena de alta potencia" },
+      { especificacion: "Sensor de golpe graduable" }
+    ]
+  },
+    {
+    id: 4,
+    titulo: "Alarma Integrada Full plus",
+    descripcion: "Este sistema de alarma es compatible con los vehículos que cuentan con control a distancia, sea un vehículo con botón de encendido o con llave. Ya cuenta con las funciones de una alarma básica,  pero a este modelo se integran más funciones de seguridad.",
+    imagen: "/integrada.png",
+    informacion: [
+      { especificacion: "Sistema Anti -asalto inteligente" },
+      { especificacion: "Bloqueo de encendido por estacionamiento" },
+      { especificacion: "Opcional : código de seguridad para encendido de motor" },
       { especificacion: "Arquitectura de bajo consumo eléctrico (Protege tu batería)." }
     ]
   }

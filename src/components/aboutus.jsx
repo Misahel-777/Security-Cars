@@ -10,14 +10,13 @@ return (
             <header>
               <h3 className="text-3xl md:text-4xl lg:text-4xl font-bold text-black mb-4">PROTEGE TU HERRAMIENTA DE TRABAJO: SEGURIDAD <br /><span className="text-[#0445ec]">REAL Y AL ALCANCE</span></h3>
             <p className="text-black mb-6 text-lg leading-relaxed">
-              Sabemos cuánto te ha costado tener tu carrito. Tu auto es tu
+              Sabemos cuánto te ha costado tener tu vehiculo. Tu auto es tu
               patrimonio y no podemos dejar que nadie te lo quite.
             </p>
           </header>
-          <p className="text-black mb-8 text-lg">En nuestro taller instalamos sistemas de seguridad que{" "}
-            <strong>sí funcionan</strong>. Somos especialistas en conexiones
-            eléctricas seguras, asegurándonos de que cada cable quede bien
-            protegido y tu alarma responda cuando más la necesites.</p>
+          <p className="text-black mb-8 text-lg">En Security Cars instalamos lo que tu vehiculo necesita{" "}
+            . Somos especialistas en sistema de seguridad que si funciona
+            , nos aseguramos de que cada equipo quede bien instalado y de esta manera responda cuando más lo necesites.</p>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           {[
