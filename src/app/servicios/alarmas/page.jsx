@@ -6,7 +6,7 @@ const productos = [
     id: 1,
     titulo: "Alarma Básica",
     descripcion: "Es un sistema práctico y resistente diseñado para detectar cualquier intento de apertura o golpe. Ideal para vehículos que buscan una protección real, sin complicaciones técnicas.",
-    imagen: "/integrada.png",
+    imagen: "/integrada.webp",
     informacion: [
       { especificacion: "Protección por apertura de puertas, capó o maletero." },
       { especificacion: "Sirena de alta potencia." },
@@ -18,7 +18,7 @@ const productos = [
     id: 2,
     titulo: "Alarma Full Plus",
     descripcion: "Lleva la seguridad de tu auto al siguiente nivel. Además de las funciones básicas, este sistema cuenta con 'Anti-Asalto': si te obligan a bajar del vehículo, el motor se apaga automáticamente tras un minuto y medio. Este sistema tambien cuanta por un bloqueo de encendido por estacionamiento, a este sistema añadimos un código de seguridad único que impide el encendido del motor incluso si logran robarte las llaves.",
-    imagen: "/integrada.png",
+    imagen: "/integrada.webp",
     informacion: [
       { especificacion: "Sistema Anti-asalto inteligente" },
       { especificacion: "Bloqueo de encendido por estacionamiento" },
@@ -30,7 +30,7 @@ const productos = [
     id: 3,
     titulo: "Alarma Básica Integrada",
     descripcion: "Este modelo de alarma se acopla al control original del vehículo. Diseñada para vehículos sea con o sin  botón de encendido, Pero que si tenga su propio mando a distancia. ",
-    imagen: "/integrada.png",
+    imagen: "/integrada.webp",
     informacion: [
       { especificacion: "Protección por apertura de puertas" },
       { especificacion: "Protección por apertura de capó" },
@@ -42,7 +42,7 @@ const productos = [
     id: 4,
     titulo: "Alarma Integrada Full plus",
     descripcion: "Este sistema de alarma es compatible con los vehículos que cuentan con control a distancia, sea un vehículo con botón de encendido o con llave. Ya cuenta con las funciones de una alarma básica,  pero a este modelo se integran más funciones de seguridad.",
-    imagen: "/integrada.png",
+    imagen: "/integrada.webp",
     informacion: [
       { especificacion: "Sistema Anti -asalto inteligente" },
       { especificacion: "Bloqueo de encendido por estacionamiento" },
