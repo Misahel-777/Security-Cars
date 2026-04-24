@@ -88,7 +88,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM */}
-      <div className="border-t border-black text-center text-xs py-6">
+      <div className="border-t border-gray-700 text-center text-xs py-6">
         © {new Date().getFullYear()} Seguridad Vehicular. Todos los derechos reservados.
       </div>
     </footer>

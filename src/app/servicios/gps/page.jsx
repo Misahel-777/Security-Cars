@@ -56,7 +56,7 @@ const faqs = [
 ];
   return (
     <>
-    <section className="relative h-[90vh] md:min-h-screen flex items-center">
+    <section className="relative h-[70vh] md:min-h-screen flex items-center">
 
       {/* Imagen */}
       <div className="absolute inset-0">

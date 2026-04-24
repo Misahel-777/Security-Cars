@@ -5,7 +5,7 @@ export default function Services() {
   const servicios = [
     { id: 1, imagen: "/GPSservice.webp", titulo: "Alarmas para vehículos", href: "/servicios/alarmas" },
     { id: 2, imagen: "/GPSservice.webp", titulo: "GPS para vehículos", href: "/servicios/gps" },
-    { id: 3, imagen: "/GPSservice.webp", titulo: "Antiasalto para auto", href: "/servicios/antiasalto" },
+    { id: 3, imagen: "/antiasalto.webp", titulo: "Antiasalto para auto", href: "/servicios/antiasalto" },
   ];
 
   return (
@@ -17,8 +17,9 @@ export default function Services() {
     <article key={servicio.id} className="flex flex-col">
 
       {/* CONTENEDOR FIJO */}
-      <figure className="relative rounded-xl overflow-hidden flex items-center justify-center">
-        <Image src={servicio.imagen} alt={`Servicio de ${servicio.titulo}`} width={450} height={230} className="object-contain"/>
+      <figure className="relative w-full h-[230px] rounded-xl overflow-hidden flex items-center justify-center">
+        <Image src={servicio.imagen} alt={`Servicio de ${servicio.titulo}`} fill
+    className="object-contain"/>
       </figure>
       <div className="pt-4 flex flex-col">
         <header>
@@ -27,12 +28,7 @@ export default function Services() {
           </h2>
         </header>
 
-        <Link
-          href={servicio.href}
-          className="button w-full text-center mt-auto"
-        >
-          Más información
-        </Link>
+        <Link href={servicio.href} className="button w-full text-center mt-auto">Más información</Link>
       </div>
     </article>
   ))}
@@ -57,7 +53,7 @@ export default function Services() {
 
             <div className="cuadro2">
               <header>
-                <span className="cuadro-h2">Reparación y/o Instalación de</span><h2 className="cuadro-h2">Alzavidrios Eléctricos</h2>
+                <h2 className="cuadro-h2"><span className="cuadro-h2">Reparación y/o Instalación de</span> Alzavidrios Eléctricos</h2>
               </header>
               <p className="text-gray-700">Servicio especializado en reparación e <strong>instalación de vidrios eléctricos para carro.</strong></p>
               <Link href="/servicios/alzavidrios" className="button bg-[#0445ec]">
@@ -73,7 +69,7 @@ export default function Services() {
             </figure>
             <div className="cuadro2">
               <header>
-                <span className="cuadro-h2">Reparación y/o Instalación de</span><h2 className="cuadro-h2">Pestillos Eléctricos</h2>
+                <h2 className="cuadro-h2"><span className="cuadro-h2">Reparación y/o Instalación de</span> Pestillos Eléctricos</h2>
               </header>
               <p className="text-gray-700">Servicio especializado en reparación e <strong>instalación de pestillos eléctricos para autos.</strong></p>
               <Link href="/servicios/pestillos" className="button bg-[#0445ec]">
