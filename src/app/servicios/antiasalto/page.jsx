@@ -105,10 +105,10 @@ const faqs = [
 
         {features.map((f, i) => (
           <article key={i}>
-                <div className="p-8 bg-gray-100 hover:bg-white transition border-l-2 hover:border-blue-600">
-      <h3 className="text-xl font-bold mb-2">{f.title}</h3>
-      <p className="text-gray-600">{f.desc}</p>
-    </div>
+            <div className="p-8 transition border-l-2 hover:border-blue-600">
+              <h3 className="text-xl font-bold mb-2">{f.title}</h3>
+              <p className="text-gray-600">{f.desc}</p>
+            </div>
           </article>
         ))}
 

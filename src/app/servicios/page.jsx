@@ -330,7 +330,7 @@ export default function ServicesPage() {
             {services.map((service) => (
               <article key={service.id} className="group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 bg-white" onClick={() => setSelectedService(service)}>
                 <figure className="relative h-48 overflow-hidden">
-                  <Image src={service.image} alt={service.title} width={400} height={200} className="object-cover transition-transform duration-500 group-hover:scale-105"/>
+                  <img src={service.image} alt={service.title} width={400} height={200} className="object-cover transition-transform duration-500 group-hover:scale-105"/>
                 </figure>
                 <header className="p-6 text-center w-full">
                   <h2 className="font-bold text-lg text-black">{service.title}</h2>
@@ -357,7 +357,7 @@ export default function ServicesPage() {
             </div>
             <div className="p-2">
               <figure className="mb-6">
-                <Image src={selectedService.image} alt={selectedService.title} width={624} height={256} className="w-full h-64 object-contain rounded-lg"/>
+                <img src={selectedService.image} alt={selectedService.title} width={624} height={256} className="w-full h-64 object-contain rounded-lg"/>
               </figure>
               <p className="text-black leading-relaxed p-2 mb-6">{selectedService.description}</p>
 

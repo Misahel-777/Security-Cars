@@ -111,7 +111,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
         <div className="grid md:grid-cols-3 gap-6 px-4">
           {serviceData.trabajos.images.map((img, i) => (
             <figure key={i}>
-              <Image src={img} alt="Trabajo realizado" width={500} height={350} className="rounded-lg"/>
+              <Image src={img} alt="Trabajo realizado" width={500} height={350} className="rounded-lg shadow object-cover mx-auto"/>
             </figure>
           ))}
         </div>
@@ -135,10 +135,13 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0343eb] text-white text-center py-16 m-8 flex gap-20 w-2xl items-center mx-auto justify-center rounded-4xl">
-        <h2 className="text-3xl font-bold">¿Necesitas ayuda?</h2>
+      <section className="bg-[#0343eb] text-white w-[300px] md:w-[450px] lg:w-[580px] mb-6 py-3 lg:py-6 flex items-center mx-auto justify-between rounded-2xl">
+        <h2 className="text-1xl md:text-2xl lg:text-3xl  font-bold m-3 lg:m-5">
+          ¿Necesitas ayuda?
+        </h2>
+
         <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-          <button className="bg-green-500 px-10 py-4 text-[18px] rounded-lg font-bold cursor-pointer">
+          <button className="bg-green-500 text-[8px] md:text-[15px] lg:text-[18px] py-4 px-4 rounded-lg font-bold cursor-pointer m-3 lg:m-5">
             Contactar ahora
           </button>
         </Link>

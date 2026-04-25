@@ -89,7 +89,7 @@ export default function ServicePage() {
           </div>
 
           <figure>
-            <Image src="/alzavidrio hero.webp" alt="Alza vidrios eléctricos" width={600} height={400} className="rounded-2xl shadow-2xl object-cover"/>
+            <Image src="/alzavidrio hero.webp" alt="Alza vidrios eléctricos" width={600} height={400} className="rounded-2xl shadow-2xl object-cover mx-auto"/>
           </figure>
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function ServicePage() {
         <div className="grid md:grid-cols-3 px-4 gap-6">
           {service.trabajos.images.map((img, i) => (
             <figure key={i}>
-              <Image src={img} alt="Trabajo realizado" width={400} height={300} className="rounded-lg shadow object-cover w-full"/>
+              <Image src={img} alt="Trabajo realizado" width={400} height={300} className="rounded-lg shadow object-cover mx-auto"/>
             </figure>
           ))}
         </div>
@@ -144,13 +144,13 @@ export default function ServicePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0343eb] text-white py-16 m-8 flex gap-20 w-2xl items-center mx-auto justify-center rounded-4xl text-center">
-        <h2 className="text-3xl font-bold">
+      <section className="bg-[#0343eb] text-white w-[300px] md:w-[450px] lg:w-[580px] mb-6 py-3 lg:py-6 flex items-center mx-auto justify-between rounded-2xl">
+        <h2 className="text-1xl md:text-2xl lg:text-3xl  font-bold m-3 lg:m-5">
           ¿Necesitas ayuda?
         </h2>
 
         <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-          <button className="bg-green-500 px-10 text-[18px] py-4 rounded-lg font-bold cursor-pointer">
+          <button className="bg-green-500 text-[8px] md:text-[15px] lg:text-[18px] py-4 px-4 rounded-lg font-bold cursor-pointer m-3 lg:m-5">
             Contactar ahora
           </button>
         </Link>

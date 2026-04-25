@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import {ChevronDown} from 'lucide-react';
 
@@ -9,6 +10,12 @@ const whatsappText = encodeURIComponent(
 );
 
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+const whatsappTextFull = encodeURIComponent(
+  "Hola estoy interesado en el GPS 4G Full"
+);
+
+const whatsappUrlFull = `https://wa.me/${whatsappNumber}?text=${whatsappTextFull}`;
 
 export default function Hero() {
   const features = [
@@ -23,11 +30,7 @@ export default function Hero() {
   {
     title: "Múltiples alarmas",
     desc: "Te avisa a tu celular si golpean tu vehículo, si violenta la chapa de encendido, si desconectan la batería del vehículo",
-  },
-  {
-    title: "GPS 4G FULL ",
-    desc: "Incluye ubicación, apagado, múltiples alarmas, por puerta, por accesorios, por desconexión de batería y (opcional: sirena y bloqueo electrónico)",
-  },
+  }
 ];
 
 const stats = [
@@ -70,7 +73,9 @@ const faqs = [
           <p className="text-xl mb-10">Con nuestra tecnología de rastreo 4G, tienes el control total de tu vehículo en tiempo real, con la red más rápida y estable del país.</p>
           </header>
           <div className="flex gap-4 flex-col sm:flex-row">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">Enviar mensaje</a>
+            <Link href={whatsappUrlFull} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">
+              Enviar mensaje
+            </Link>
           </div>
         </div>
       </div>
@@ -107,13 +112,24 @@ const faqs = [
 
         {features.map((f, i) => (
           <article key={i}>
-                <div className="p-8 transition border-l-2 hover:border-blue-600">
-      <h3 className="text-xl font-bold mb-2">{f.title}</h3>
-      <p className="text-gray-600">{f.desc}</p>
-    </div>
+            <div className="p-8 transition border-l-2 hover:border-blue-600">
+              <h3 className="text-xl font-bold mb-2">{f.title}</h3>
+              <p className="text-gray-600">{f.desc}</p>
+              </div>
           </article>
         ))}
 
+  <article>
+            <div className="p-10 transitio shadow-2xl rounded-2xl shadow-blue-600/80">
+              <h3 className="text-xl font-bold mb-2">GPS 4G FULL</h3>
+              <p className="text-gray-600">Incluye ubicación, apagado, múltiples alarmas, por puerta, por accesorios, por desconexión de batería y (opcional: sirena y bloqueo electrónico)</p>
+              <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+          <button className="bg-green-500 text-[16px] py-4 px-4 rounded-lg font-bold cursor-pointer mt-5 text-white">
+            Contactar ahora
+          </button>
+        </Link>
+              </div>
+          </article>
       </div>
     </section>
 
