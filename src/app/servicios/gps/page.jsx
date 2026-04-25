@@ -64,7 +64,7 @@ const faqs = [
 
       {/* Imagen */}
       <div className="absolute inset-0">
-        <img src="/gpshero.webp" alt="GPS 4G" fill className="object-cover" />
+        <Image src="/gpshero.webp" alt="GPS 4G" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/80"></div>
       </div>
 
