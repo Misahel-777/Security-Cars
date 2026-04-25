@@ -295,7 +295,7 @@ list: [
     text: "Material ignífugo y no tóxico, diseñado específicamente para entornos automotrices exigentes."
   }
 ],
-    image: '/insonorizanteg.webp',
+    image: '/insonorizante.webp',
   },
 ];
 
