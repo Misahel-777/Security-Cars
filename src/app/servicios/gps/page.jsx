@@ -12,7 +12,7 @@ const whatsappText = encodeURIComponent(
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 
 const whatsappTextFull = encodeURIComponent(
-  "Hola estoy interesado en el GPS 4G Full"
+  "Hola estoy interesado en el GPS 4G Full ggggggggggggggggggggggggggggggggggg"
 );
 
 const whatsappUrlFull = `https://wa.me/${whatsappNumber}?text=${whatsappTextFull}`;
