@@ -66,7 +66,7 @@ const getWhatsappLink = (producto) => {
 
       {/* Imagen */}
       <div className="absolute inset-0">
-        <Image src="/alarmahero.webp" alt="Alarma para autos" fill className="object-cover" />
+        <img src="/alarmahero.webp" alt="Alarma para autos" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/80"></div>
       </div>
 

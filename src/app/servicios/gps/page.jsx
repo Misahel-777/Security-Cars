@@ -11,8 +11,9 @@ const whatsappText = encodeURIComponent(
 
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 
+
 const whatsappTextFull = encodeURIComponent(
-  "Hola estoy interesado en el GPS 4G Full ggggggggggggggggggggggggggggggggggg"
+  "Hola estoy interesado en el GPS 4G Full"
 );
 
 const whatsappUrlFull = `https://wa.me/${whatsappNumber}?text=${whatsappTextFull}`;
@@ -63,7 +64,7 @@ const faqs = [
 
       {/* Imagen */}
       <div className="absolute inset-0">
-        <Image src="/gpshero.webp" alt="GPS 4G" fill className="object-cover" />
+        <img src="/gpshero.webp" alt="GPS 4G" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/80"></div>
       </div>
 
@@ -73,7 +74,7 @@ const faqs = [
           <p className="text-xl mb-10">Con nuestra tecnología de rastreo 4G, tienes el control total de tu vehículo en tiempo real, con la red más rápida y estable del país.</p>
           </header>
           <div className="flex gap-4 flex-col sm:flex-row">
-            <Link href={whatsappUrlFull} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">
+            <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">
               Enviar mensaje
             </Link>
           </div>
@@ -95,7 +96,7 @@ const faqs = [
         </figure>
 
 
-          <Image src="/gps.png" alt="Tecnología 4G" width={400} height={200} className="object-cover mx-auto" />
+          <Image src="/gps.webp" alt="Tecnología 4G" width={400} height={200} className="object-cover mx-auto" />
 
       </div>
     </section>
@@ -123,7 +124,7 @@ const faqs = [
             <div className="p-10 transitio shadow-2xl rounded-2xl shadow-blue-600/80">
               <h3 className="text-xl font-bold mb-2">GPS 4G FULL</h3>
               <p className="text-gray-600">Incluye ubicación, apagado, múltiples alarmas, por puerta, por accesorios, por desconexión de batería y (opcional: sirena y bloqueo electrónico)</p>
-              <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={whatsappUrlFull} target="_blank" rel="noopener noreferrer">
           <button className="bg-green-500 text-[16px] py-4 px-4 rounded-lg font-bold cursor-pointer mt-5 text-white">
             Contactar ahora
           </button>
