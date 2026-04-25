@@ -5,7 +5,7 @@ import {ChevronDown} from 'lucide-react';
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 const whatsappText = encodeURIComponent(
-  "Hola estoy interesado en el GPS 4G. ¿Podrían darme más información?"
+  "Hola estoy interesado en el GPS 4G"
 );
 
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
@@ -21,12 +21,12 @@ export default function Hero() {
     desc: "Recibe una notificación instantánea apenas alguien intente encender tu motor sin tu permiso.",
   },
   {
-    title: "Multiples alarmas",
-    desc: "Te avisa a tu celular si golpean tu vehiculo, si violenta la chapa de encendido, si desconectan la bateria del vehiculo",
+    title: "Múltiples alarmas",
+    desc: "Te avisa a tu celular si golpean tu vehículo, si violenta la chapa de encendido, si desconectan la batería del vehículo",
   },
   {
     title: "GPS 4G FULL ",
-    desc: "Incluye ubicacion, apagado, multiples alarmas, por puerta, por accesorios, por desconeccion de bateria y (opcional: sirena y bloqueo lectronico)",
+    desc: "Incluye ubicación, apagado, múltiples alarmas, por puerta, por accesorios, por desconexión de batería y (opcional: sirena y bloqueo electrónico)",
   },
 ];
 
@@ -38,20 +38,20 @@ const stats = [
 ];
 const faqs = [
   {
-    q: "¿Si desconectan los cables de la bateria del auto el GPS sigue funcionando?",
-    a: "¡Claro que sí! Nuestros equipos cuentan con una batería interna de respaldo que mantiene el rastreo activo por varias horas aunque desconecten la batería principal.",
+    q: "¿Si desconectan los cables de la batería del auto el GPS sigue funcionando?",
+    a: "¡Claro que sí! Nuestros equipos cuentan con una batería interna de respaldo que mantiene el rastreo activo por varias horas, aunque desconecten la batería principal.",
   },
   {
     q: "¿Instalar el GPS afecta la garantía de mi auto nuevo?",
-    a: "No. Realizamos instalaciones técnica especializada que no alteran el sistema eléctrico original del vehículo, manteniendo tu garantía intacta.",
+    a: "No. Realizamos instalaciones técnicas especializada que no alteran el sistema eléctrico original del vehículo, manteniendo tu garantía intacta.",
   },
   {
     q: "¿Puedo tener varios vehículos bajo el mismo usuario del aplicativo?",
-    a: "Si, podra visualizar su flota de vehiculos desde el aplicativo, computadora o tablet",
+    a: "Si, podrá visualizar su flota de vehículos desde el aplicativo, computadora o tablet",
   },
   {
-    q: "¿El equipo es unico pago?",
-    a: "Si, el equipo es unico pago de por vida",
+    q: "¿El equipo es único pago?",
+    a: "Si, el equipo es único pago de por vida",
   },
 ];
   return (
@@ -66,26 +66,26 @@ const faqs = [
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="max-w-3xl text-white">
-          <header><h1 className="text-5xl font-extrabold mb-6">GPS 4G para Autos</h1>
+          <header><h1 className="text-5xl font-extrabold mb-6">GPS 4G para autos</h1>
           <p className="text-xl mb-10">Con nuestra tecnología de rastreo 4G, tienes el control total de tu vehículo en tiempo real, con la red más rápida y estable del país.</p>
           </header>
           <div className="flex gap-4 flex-col sm:flex-row">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">Hablar con el técnico</a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">Enviar mensaje</a>
           </div>
         </div>
       </div>
     </section>
 
-        <section className="py-24 bg-gray-100">
+        <section className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
 
-        <figure>
+        <figure className="flex flex-col justify-center">
                     <h2 className="text-4xl font-bold mb-6">
             ¿Por qué actualizarte a la tecnología GPS 4G?
           </h2>
 
           <p className="mb-8 text-gray-600">
-            Las redes antiguas (2G y 3G) están dejando de funcionar en toda la región. Un GPS 4G no solo es más rápido; es la única forma de garantizar que la señal de tu auto no se pierda cuando más la necesites. Ya sea para proteger el auto de la familia o tu herramienta de trabajo.
+            Las redes antiguas (2G y 3G) están dejando de funcionar en toda la región. Un <strong>GPS 4G</strong> no solo es más rápido; es la única forma de garantizar que la señal de tu auto no se pierda cuando más la necesites. Ya sea para proteger el auto de la familia o tu herramienta de trabajo.
           </p>
         </figure>
 
@@ -139,7 +139,7 @@ const faqs = [
           </h2>
 
           <p className="text-white/80 mb-2">
-            Nuestra aplicación es tan fácil de usar como mandar un mensaje de WhatsApp. Olvida comandos complicados por SMS; ahora puedes ver tu vehículo las 24 horas, la velocidad actual y el estado del motor, con nuestro sistema de GPS 4G Alsama podras tener un mayor control de tu flota de vehiculos.
+            Nuestra aplicación es tan fácil de usar como mandar un mensaje de WhatsApp. Olvida comandos complicados por SMS; ahora puedes ver tu vehículo las 24 horas, la velocidad actual y el estado del motor, con nuestro sistema de <strong>GPS 4G</strong> Alsama podrás tener un mayor control de tu flota de vehículos.
           </p>
         </article>
 

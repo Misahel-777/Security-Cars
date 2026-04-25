@@ -75,10 +75,10 @@ export default function Footer() {
             <span className="mb-2">Redes sociales</span>
               <div className="flex gap-3">
                 <a href="https://www.facebook.com/profile.php?id=100049090133607" target="_blank" rel="noopener noreferrer">
-                  <Image src="/facebook.webp" alt="Facebook" width={32} height={32} className="rounded-2xl" />
+                  <Image src="/facebook.webp" alt="Facebook" width={24} height={24} className="rounded-2xl" />
                 </a>
                 <a href="https://www.tiktok.com/@securitycars?lang=es-419" target="_blank" rel="noopener noreferrer">
-                  <Image src="/tiktok.webp" alt="TikTok" width={35} height={35} className="rounded-2xl" />
+                  <Image src="/tiktok.webp" alt="TikTok" width={25} height={25} className="rounded-2xl" />
                 </a>
               </div>
             </div>

@@ -6,11 +6,6 @@ import { Volume2, AlertTriangle, Settings, Wrench, Cable, CheckCircle, Lock, Shi
 export default function ServicePage() {
 
 const serviceData = {
-  title: "Reparación de Pestillos Eléctricos y Cierre Centralizado",
-  description:
-    "¿Tus seguros no bajan? Ofrecemos el mejor servicio de instalación y reparación de cierre centralizado para autos. Soluciones rápidas en pestillos eléctricos para que tu auto quede seguro y moderno a un precio justo.",
-  image: "/pestilloshero.webp",
-
   problems: [
     {
       icon: Lock,
@@ -67,7 +62,7 @@ const serviceData = {
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 const whatsappText = encodeURIComponent(
-  "Hola 👋, estoy interesado en el servicio de reparación de pestillos eléctricos y cierre centralizado. ¿Podrían brindarme más información y un precio aproximado?"
+  "Hola 👋, estoy interesado en el servicio de pestillos eléctricos"
 );
 
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
@@ -79,17 +74,17 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <header>
-              <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">{serviceData.title}</h1>
-              <p className="text-blue-100 text-lg">{serviceData.description}</p>
+              <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Reparación de Pestillos Eléctricos y Cierre Centralizado</h1>
+              <p className="text-blue-100 text-lg">¿Tus seguros no bajan? Ofrecemos el mejor servicio de instalación y reparación de <strong>cierre centralizado para autos</strong>. Soluciones rápidas para que tu auto quede seguro y moderno a un precio justo.</p>
               <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <button className="bg-green-500 px-8 mt-5 py-4 rounded-lg font-bold hover:bg-green-400 transition">
-                Solicitar por WhatsApp
+                Enviar mensaje
               </button>
             </Link>
             </header>
           </div>
           <figure>
-            <Image src={serviceData.image} alt="" width={700} height={500} className="rounded-2xl overflow-hidden shadow-2xl"/>
+            <Image src="/pestilloshero.webp" alt="pestillos eléctricos" width={700} height={500} className="rounded-2xl overflow-hidden shadow-2xl"/>
           </figure>
         </div>
       </section>
@@ -116,7 +111,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
         <div className="grid md:grid-cols-3 gap-6 px-4">
           {serviceData.trabajos.images.map((img, i) => (
             <figure key={i}>
-              <Image src={img} alt="" width={500} height={350} className="rounded-lg"/>
+              <Image src={img} alt="Trabajo realizado" width={500} height={350} className="rounded-lg"/>
             </figure>
           ))}
         </div>

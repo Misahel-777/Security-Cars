@@ -8,16 +8,16 @@ const productos = [
     descripcion: "Es un sistema práctico y resistente diseñado para detectar cualquier intento de apertura o golpe. Ideal para vehículos que buscan una protección real, sin complicaciones técnicas.",
     imagen: "/integrada.webp",
     informacion: [
-      { especificacion: "Protección por apertura de puertas, capó o maletero." },
-      { especificacion: "Sirena de alta potencia." },
-      { especificacion: "Sensor de golpe graduable." },
-      { especificacion: "Incluye dos controles de largo alcance." }
+      { especificacion: "Protección por apertura de puertas, capó o maletero" },
+      { especificacion: "Sirena de alta potencia" },
+      { especificacion: "Sensor de golpe graduable" },
+      { especificacion: "Incluye dos controles de largo alcance" }
     ]
   },
   {
     id: 2,
     titulo: "Alarma Full Plus",
-    descripcion: "Lleva la seguridad de tu auto al siguiente nivel. Además de las funciones básicas, este sistema cuenta con 'Anti-Asalto': si te obligan a bajar del vehículo, el motor se apaga automáticamente tras un minuto y medio. Este sistema tambien cuanta por un bloqueo de encendido por estacionamiento, a este sistema añadimos un código de seguridad único que impide el encendido del motor incluso si logran robarte las llaves.",
+    descripcion: "Lleva la seguridad de tu auto al siguiente nivel. Además de las funciones básicas, este sistema cuenta con 'Anti-Asalto': si te obligan a bajar del vehículo, el motor se apaga automáticamente tras un minuto y medio. Este sistema también cuanta por un bloqueo de encendido por estacionamiento, a este sistema añadimos un código de seguridad único que impide el encendido del motor incluso si logran robarte las llaves.",
     imagen: "/integrada.webp",
     informacion: [
       { especificacion: "Sistema Anti-asalto inteligente" },
@@ -46,8 +46,8 @@ const productos = [
     informacion: [
       { especificacion: "Sistema Anti -asalto inteligente" },
       { especificacion: "Bloqueo de encendido por estacionamiento" },
-      { especificacion: "Opcional : código de seguridad para encendido de motor" },
-      { especificacion: "Arquitectura de bajo consumo eléctrico (Protege tu batería)." }
+      { especificacion: "Opcional: código de seguridad para encendido de motor" },
+      { especificacion: "Arquitectura de bajo consumo eléctrico (Protege tu batería)" }
     ]
   }
 ];
@@ -55,7 +55,7 @@ const productos = [
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 const getWhatsappLink = (producto) => {
-  const message = `Hola 👋, estoy interesado en el servicio de ${producto}. ¿Podrían darme más información?`;
+  const message = `Hola 👋, estoy interesado en el servicio de ${producto}`;
 
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
@@ -84,7 +84,7 @@ const getWhatsappLink = (producto) => {
             <article key={producto.id} className="grid md:grid-cols-2 gap-10 items-start">
               {/* IMAGEN */}
               <figure className="relative rounded-lg overflow-hidden">
-                <Image src={producto.imagen} alt={producto.titulo} width={700} height={300} className="object-contain"/>
+                <Image src={producto.imagen} alt="Imagen de la alarma" width={700} height={300} className="object-contain"/>
               </figure>
 
               {/* CONTENIDO */}

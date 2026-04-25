@@ -5,7 +5,7 @@ import {ChevronDown} from 'lucide-react';
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 const whatsappText = encodeURIComponent(
-  "Hola estoy interesado en el antiasalto. ¿Podrían darme más información?"
+  "Hola estoy interesado en el Anti-asalto"
 );
 
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
@@ -13,19 +13,19 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 export default function Hero() {
 const features = [
   {
-    title: "Inmovilización del vehiculo por estacionamiento",
-    desc: "Al momento de estacionar su vehiculo, el sistema se activa automáticamente despues del minuto y medio bloqueando el motor. Esto garantiza que incluso si un ladrón logra ingresar al vehículo, no podrá arrancarlo sin su autorización.",
+    title: "Inmovilización del vehículo por estacionamiento",
+    desc: "Al momento de estacionar su vehículo, el sistema se activa automáticamente después del minuto y medio bloqueando el motor. Esto garantiza que incluso si un ladrón logra ingresar al vehículo, no podrá arrancarlo sin su autorización.",
   },
   {
     title: "Protección modo anti a atraco",
-    desc: "Si lo bajan forzosamente del vehiculo, el ladron podra llevarse el vehiculo pero al minuto y medio se bloqueara el motor automoticamente, aumentando las posibilidades de recuperación y reduciendo el riesgo para el conductor.",
+    desc: "Si lo bajan forzosamente del vehículo, el ladrón podrá llevarse el vehículo pero al minuto y medio se bloqueará el motor automáticamente, aumentando las posibilidades de recuperación y reduciendo el riesgo para el conductor.",
   },
     {
     title: "Modo Valet Inteligente",
-    desc: "Entrega tu auto para mantenimiento sin revelar tu sistema de seguridad. El sistema permanece oculto y bajo tu control absoluto y lo activas al momento de que usted sale del mantenimiento de su vehiculo",
+    desc: "Entrega tu auto para mantenimiento sin revelar tu sistema de seguridad. El sistema permanece oculto y bajo tu control absoluto y lo activas al momento de que usted sale del mantenimiento de su vehículo",
   },
   {
-    title: "Bloqueo electronico con codigo (muy pronto)",
+    title: "Bloqueo electrónico con código (muy pronto)",
     desc: "",
   },
 ];
@@ -40,7 +40,7 @@ const stats = [
 const faqs = [
   {
     q: "¿Afecta la garantía de mi auto nuevo?",
-    a: "No. No afecta la garantia la instalacion se hace con tecnicos especializados.",
+    a: "No. No afecta la garantía la instalación se hace con técnicos especializados.",
   },
   {
     q: "¿Es peligroso que el auto se detenga en marcha?",
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: "¿Qué sucede si pierdo mi chip o control de proximidad?",
-    a: "El sistema cuenta con un método de desactivación de emergencia el cual el tecnico le va a enseñar a la hora de la instalacion.",
+    a: "El sistema cuenta con un método de desactivación de emergencia el cual el técnico le va a enseñar a la hora de la instalación.",
   },
 ];
 
@@ -64,11 +64,11 @@ const faqs = [
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="max-w-3xl text-white">
-          <header><h1 className="text-5xl font-extrabold mb-6">Sistemas Antiasalto de Última Generación</h1>
-          <p className="text-xl mb-10">Implementamos sistema de antirobo</p>
+          <header><h1 className="text-5xl font-extrabold mb-6">Sistemas Anti-asalto de Última Generación</h1>
+          <p className="text-xl mb-10">Implementamos sistema de antirrobo</p>
           </header>
           <div className="flex gap-4 flex-col sm:flex-row">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">Hablar con el técnico</a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-green-500 text-center rounded-lg">Enviar mensaje</a>
           </div>
         </div>
       </div>
@@ -79,16 +79,16 @@ const faqs = [
 
         <figure>
           <h2 className="text-4xl font-bold mb-6">
-            ¿Por qué instalar un Anti asalto a tu vehículo?
+            ¿Por qué instalar un Anti-asalto a tu vehículo?
           </h2>
 
           <p className="mb-8 text-gray-600">
-            Este sistema es 100% efectivo ya que es sumamente discreto no hemite ningun sonido ni luz que delate su presencia.
+            Este sistema es 100% efectivo ya que es sumamente discreto no emite ningún sonido ni luz que delate su presencia.
           </p>
         </figure>
 
 
-          <Image src="/" alt="" width={400} height={200} className="object-cover mx-auto" />
+          <Image src="/antiasaltohero.webp" alt="" width={500} height={100} className="object-cover mx-auto" />
 
       </div>
     </section>

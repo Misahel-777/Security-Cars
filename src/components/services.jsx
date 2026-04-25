@@ -37,7 +37,7 @@ export default function Services() {
         {/* VER MÁS */}
         <div className="max-w-7xl mx-auto pt-20 pb-5 px-4 text-center">
           <Link href="/servicios" className="flex text-[#0445ec] items-center justify-center gap-2 mx-auto text-[18px] font-semibold">
-            Ver todos los servicios
+            Ver todos los productos
           </Link>
         </div>
       </section>

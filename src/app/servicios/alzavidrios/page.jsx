@@ -6,11 +6,6 @@ import { Zap, Gauge, Cpu, ShieldCheck, Wrench, AlertTriangle, Home,} from "lucid
 
 export default function ServicePage() {
   const service = {
-    title: "Reparación e Instalación de Alzavidrios Eléctricos",
-    description:
-      "¿Tus vidrios se trabaron o suben muy lento? Somos expertos en la reparación e instalación de alzavidrios eléctricos para todo tipo de autos. Te ayudamos con fallas en motores, botones y el módulo alzavidrio de tu vehículo.",
-    image: "/alzavidrio hero.webp",
-
     problems: [
       {
         icon: AlertTriangle,
@@ -20,7 +15,7 @@ export default function ServicePage() {
       },
       {
         icon: Zap,
-        title: "El motor suena pero no funciona",
+        title: "El motor suena, pero no funciona",
         description:
           "Probable daño en cables o engranajes. Lo solucionamos rápido.",
       },
@@ -71,7 +66,7 @@ export default function ServicePage() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
   const whatsappText = encodeURIComponent(
-    "Hola 👋, estoy interesado en el servicio de reparación de alzavidrios eléctricos."
+    "Hola 👋, estoy interesado en el servicio de alzavidrios eléctricos."
   );
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
@@ -83,18 +78,18 @@ export default function ServicePage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <header>
-              <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">{service.title}</h1>
-              <p className="text-blue-100 text-lg">{service.description}</p>
-              <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Reparación e Instalación de Alza vidrios Eléctricos</h1>
+              <p className="text-blue-100 text-lg">¿Tus vidrios se trabaron o suben muy lento? Somos expertos en la reparación e instalación de alza vidrios eléctricos para todo tipo de autos. Te ayudamos con fallas en motores, botones y el módulo alza vidrio de tu vehículo.</p>
+              <Link href="/alzavidrio hero.webp" target="_blank" rel="noopener noreferrer">
               <button className="bg-green-500 px-8 py-4 rounded-lg font-bold mt-4 hover:bg-green-400">
-                Solicitar por WhatsApp
+                Enviar mensaje
               </button>
             </Link>
             </header>
           </div>
 
           <figure>
-            <Image src={service.image} alt={service.title} width={600} height={400} className="rounded-2xl shadow-2xl object-cover"/>
+            <Image src="/alzavidrio hero.webp" alt="Alza vidrios eléctricos" width={600} height={400} className="rounded-2xl shadow-2xl object-cover"/>
           </figure>
         </div>
       </section>

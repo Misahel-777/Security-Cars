@@ -9,13 +9,13 @@ const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 const getWhatsappLink = (serviceTitle) => {
   const text = encodeURIComponent(
-    `Hola 👋, estoy interesado en el servicio de ${serviceTitle}. ¿Podrían brindarme más información y precio?`
+    `Hola 👋, estoy interesado en el producto de ${serviceTitle}. ¿Podrían brindarme más información y precio?`
   );
 
   return `https://wa.me/${whatsappNumber}?text=${text}`;
 };
 
-// Servicios (puedes extenderlos fácilmente)
+// Productos (puedes extenderlos fácilmente)
 const services = [
   {
     id: 1,
@@ -320,7 +320,7 @@ export default function ServicesPage() {
       <main className="py-12 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <header className="text-center mb-10">
-            <h3 className="text-4xl font-bold">Nuestros Servicios</h3>
+            <h3 className="text-4xl font-bold">Nuestros Productos</h3>
             <p className="text-gray-600 mt-2">
               Equipamiento y tecnología para mejorar tu vehículo
             </p>
