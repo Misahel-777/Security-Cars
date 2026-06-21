@@ -54,7 +54,7 @@ const serviceData = {
         "Entregamos tu cierre centralizado instalado y probado. Verificamos que no consuma batería y que cierre perfecto al arrancar.",
     },
   ],
-  }
+  };
 
 const whatsappNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER;
 
@@ -69,7 +69,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
         keywords = "cierre centralizado, cierre centralizado universal, cierre centralizado auto, cierre centralizado para autos,cierre centralizado, cierre centralizado universal, cierre centralizado auto, cierre centralizado para autos
 ">
     <main >
-      {/* HERO */}
+      <!-- HERO -->
       <section class="bg-linear-to-r from-[#0343eb] to-[#0343eb]/80 text-white py-14 px-4">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
@@ -89,7 +89,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
         </div>
       </section>
 
-      {/* PROBLEMAS */}
+      <!-- PROBLEMAS -->
       <section class="max-w-7xl mx-auto py-20 px-4">
         <header class="text-center mb-12">
           <h3 class="text-3xl font-bold">Problemas comunes</h3>
@@ -108,7 +108,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
         </div>
       </section>
 
-      {/* TRABAJOS */}
+      <!-- TRABAJOS -->
       <section class="max-w-5xl mx-auto text-center pb-20">
         <header>
           <h3 class="text-3xl font-bold mb-8">Nuestros trabajos</h3>
@@ -121,7 +121,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
           ))}
         </div>
       </section>
-      {/* SERVICIOS */}
+      <!-- SERVICIOS -->
       <section class="bg-white py-20 px-4">
         <div class="max-w-7xl mx-auto">
           <header class="text-center mb-12">
@@ -133,7 +133,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
                 {service.icon === "settings" && <Settings className="text-[#0343eb] mb-3 w-6 h-6" />}
                 {service.icon === "wrench" && <Wrench className="text-[#0343eb] mb-3 w-6 h-6" />}
                 {service.icon === "cable" && <Cable className="text-[#0343eb] mb-3 w-6 h-6" />}
-                {service.icon === "check-circle" && <CheckCircle className="text-[#0343eb] mb-3 w-6 h-6" />
+                {service.icon === "check-circle" && <CheckCircle className="text-[#0343eb] mb-3 w-6 h-6" />}
                 <h2 class="font-bold mb-2">{service.title}</h2>
                 <p class="text-sm text-gray-600">{service.description}</p>
               </article>
@@ -141,7 +141,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
           </div>
         </div>
       </section>
-      {/* CTA */}
+      <!-- CTA -->
       <section class="bg-[#0343eb] text-white w-[300px] md:w-[450px] lg:w-[580px] mb-6 py-3 lg:py-6 flex items-center mx-auto justify-around rounded-2xl">
         <h2 class="text-1xl md:text-2xl lg:text-3xl  font-bold m-2 lg:m-5">
           ¿Necesitas ayuda?

@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/*Pagina de inzonorizacion*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Sans:wght@700&family=Sora:wght@800&family=JetBrains+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
 *, *::before, *::after { box-sizing: border-box}
 
 html, body { height: 100dvh; padding: 0; margin: 0}
@@ -86,13 +91,6 @@ h1 { font-weight: 800}
 .hero-overlay {
   background: linear-gradient(135deg, hsla(0, 0%, 8%, 0.85) 0%, hsla(0, 0%, 0%, 0.7) 100%);
 }
-
-
-
-/*Pagina de inzonorizacion*/
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Sans:wght@700&family=Sora:wght@800&family=JetBrains+Mono:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 
 /* Spacing */
