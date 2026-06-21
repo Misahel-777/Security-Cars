@@ -1,0 +1,62 @@
+---
+import { Phone, Mail } from '@lucide/astro';
+
+const whatsappNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER;
+
+const whatsappText = encodeURIComponent(
+  "Hola 👋, estoy interesado en sus servicios"
+);
+
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+---
+        <section class="relative py-20 md:py-10">
+      <div class="max-w-5xl mx-auto px-4 md:px-10 lg:px-8">
+        <div class="rounded-3xl bg-[#FAFAFA] shadow-xl/30 items-center">
+
+            <!-- LEFT -->
+            <div id="contact" class="p-8 md:p-16 lg:p-20">
+
+                <h4 class="text-3xl md:text-4xl lg:text-4xl text-center font-extrabold leading-tight">Contactanos</h4>
+
+            <!-- RIGHT -->
+            <div class="relative p-4 md:p-6 lg:p-20 mx-auto rounded-b-3xl flex flex-col items-center justify-center text-center">
+                <div class="mb-4">
+                  <h4 class="text-[20px] font-bold mb-2">Atención Personalizada</h4>
+                </div>
+                <!-- BOTÓN WHATSAPP -->
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="group w-full py-5 rounded-full flex items-center justify-center gap-2 text-white font-extrabold text-[20px] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%)">WhatsApp</a>
+            </div>
+
+                <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                  <div class="flex flex-col items-center gap-4">
+                      <!-- ICONO PHONE -->
+                      <Phone className="w-10 h-10 p-3 rounded-[5px] bg-green-500 text-white box-content" />
+                    <div>
+                      <p class="text-gray-700">907 300 174</p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-4">
+                      <!-- ICONO MAIL -->
+                      <Mail className="w-10 h-10 mx-auto bg-gray-200 p-3 rounded-[5px] text-red-600 box-content" />
+                    <div>
+                      <p class="text-gray-700">misahel@gmail.com</p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-4">
+                    <p class='font-medium text-[20px]'>Redes sociales</p>
+                      <div class="flex gap-3 mx-auto">
+                        <a href="https://www.facebook.com/profile.php?id=100049090133607" target="_blank" rel="noopener noreferrer">
+                          <img src="/facebook.webp" alt="Facebook" width="28" height="28" class="rounded-2xl" />
+                        </a>
+                        <a href="https://www.tiktok.com/@securitycars?lang=es-419" target="_blank" rel="noopener noreferrer">
+                          <img src="/tiktok.webp" alt="TikTok" width="27" height="27" class="rounded-2xl" />
+                        </a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>

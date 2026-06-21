@@ -1,0 +1,40 @@
+---
+// poner date en el const
+const { title, description, image, slug } = Astro.props;
+
+/**  Validar y formatear fecha
+const formatDate = (dateValue: any) => {
+  try {
+    const d = new Date(dateValue);
+    if (isNaN(d.getTime())) return null;
+    return {
+      formatted: d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }),
+      iso: d.toISOString().split('T')[0]
+    };
+  } catch {
+    return null;
+  }
+};
+
+const formattedDate = formatDate(date);*/
+---
+
+<a href={`/blog/${slug}`} class="block no-underline text-inherit rounded-[12px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.1)] transition-transform duration-200 hover:-translate-y-[5px]">
+  <article itemscope itemtype="https://schema.org/BlogPosting">
+    <img src={image} alt={title}loading="lazy"decoding="async"onerror="this.src='/images/default-blog.jpg'" class="w-full h-[200px] object-cover"/>
+
+    <div class="p-4">
+      <h2 class="headline text-[20px]">{title}</h2>
+      <p class="description text-[14px] text-gray-600">{description}</p>
+
+      <!--
+      {formattedDate && (
+        <time class="text-[12px] text-gray-500" datetime={formattedDate.iso}itemprop="datePublished">
+          {formattedDate.formatted}
+        </time>
+      )} -->
+      
+      <meta itemprop="url" content={`https://securitycars.com/blog/${slug}`} />
+    </div>
+  </article>
+</a>

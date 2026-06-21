@@ -1,0 +1,117 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const productos = [
+  {
+    id: 1,
+    titulo: "Alarma Básica",
+    descripcion: "Es un sistema práctico y resistente diseñado para detectar cualquier intento de apertura o golpe. Ideal para vehículos que buscan una protección real, sin complicaciones técnicas.",
+    imgn: "/alarmabasica.webp",
+    informacion: [
+      { especificacion: "Protección por apertura de puertas, capó o maletero" },
+      { especificacion: "Sirena de alta potencia" },
+      { especificacion: "Sensor de golpe graduable" },
+      { especificacion: "Incluye dos controles de largo alcance" }
+    ]
+  },
+  {
+    id: 2,
+    titulo: "Alarma Full Plus",
+    descripcion: "Lleva la seguridad de tu auto al siguiente nivel. Además de las funciones básicas, este sistema cuenta con 'Anti-Asalto': si te obligan a bajar del vehículo, el motor se apaga automáticamente tras un minuto y medio. Este sistema también cuanta por un bloqueo de encendido por estacionamiento, a este sistema añadimos un código de seguridad único que impide el encendido del motor incluso si logran robarte las llaves.",
+    imgn: "/alarmafullplus.webp",
+    informacion: [
+      { especificacion: "Sistema Anti-asalto inteligente" },
+      { especificacion: "Bloqueo de encendido por estacionamiento" },
+      { especificacion: "Código de seguridad para el arranque" },
+      { especificacion: "Sistema de sonido inteligente" }
+    ]
+  },
+  {
+    id: 3,
+    titulo: "Alarma Básica Integrada",
+    descripcion: "Este modelo de alarma se acopla al control original del vehículo. Diseñada para vehículos sea con o sin  botón de encendido, Pero que si tenga su propio mando a distancia. ",
+    imgn: "/integradabasica.webp",
+    informacion: [
+      { especificacion: "Protección por apertura de puertas" },
+      { especificacion: "Protección por apertura de capó" },
+      { especificacion: "Sirena de alta potencia" },
+      { especificacion: "Sensor de golpe graduable" }
+    ]
+  },
+    {
+    id: 4,
+    titulo: "Alarma Integrada Full plus",
+    descripcion: "Este sistema de alarma es compatible con los vehículos que cuentan con control a distancia, sea un vehículo con botón de encendido o con llave. Ya cuenta con las funciones de una alarma básica,  pero a este modelo se integran más funciones de seguridad.",
+    imgn: "/integradafullplus.webp",
+    informacion: [
+      { especificacion: "Sistema Anti -asalto inteligente" },
+      { especificacion: "Bloqueo de encendido por estacionamiento" },
+      { especificacion: "Opcional: código de seguridad para encendido de motor" },
+      { especificacion: "Arquitectura de bajo consumo eléctrico (Protege tu batería)" }
+    ]
+  }
+];
+
+const whatsappNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER;
+
+const getWhatsappLink = (producto: string) => {
+  const message = `Hola 👋, estoy interesado en el servicio de ${producto}`;
+
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+};
+---
+<Layout title="Alarma para Auto | Security Cars"
+        description ="Protege tu vehículo con las mejores alarmas para auto. Instalación rápida, sensores de movimiento y bloqueo de motor. ¡Cotiza tu seguridad ahora!"
+        keywords = "alarmas para carro, alarma para coche, instalacion de alarmas para autos, alarma de carro, alarmas de autos, alarmas para vehiculos, instalación de alarmas para autos a domicilio, alarmas para autos precios, instalación alarma auto, instalación de alarmas para autos precios, tipo de alarmas para autos, tipos de alarma para carro, venta alarmas para autos, venta de alarmas para carro, venta e instalación de alarmas para autos">
+    <section class="relative h-[70vh] md:min-h-screen flex items-center">
+
+      {/* imgn */}
+      <div class="absolute inset-0">
+        <img src="/alarmahero.webp" alt="Alarma para autos" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/80"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl">
+          <header><h1 class="text-5xl text-center text-white mb-6">Alarma para autos</h1></header>
+        </div>
+      </div>
+    </section>
+
+      {/* PRODUCTOS */}
+      <main class="py-16">
+        <div class="max-w-7xl mx-auto px-4 space-y-20">
+          {productos.map((producto) => (
+            <article class="grid md:grid-cols-2 gap-10 items-start">
+              {/* imgN */}
+              <figure class="relative rounded-lg overflow-hidden">
+                <img src={producto.imgn} alt="imgn de la alarma" class="w-full h-[200px] md:h-[300px] object-contain"/>
+              </figure>
+
+              {/* CONTENIDO */}
+              <div class="space-y-4">
+                <header>
+                  <h2 class="text-2xl font-bold">{producto.titulo}</h2>
+                </header>
+                <p>{producto.descripcion}</p>
+                <a href={getWhatsappLink(producto.titulo)} target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg">Contactar</a>
+
+                {/* INFO */}
+                {producto.informacion?.length > 0 && (
+                  <section>
+                    <p class="font-bold text-lg mb-3">
+                      Información Técnica
+                    </p>
+
+                    <ul class="grid lg:grid-cols-4 grid-cols-2 gap-2 mb-5">
+                      {producto.informacion.map((info) => (
+                        <li class="bg-[#F2F2F2] shadow-lg p-1 rounded-2xl flex items-center justify-center text-[12px] text-center min-h-[80px] max-h-[82px] overflow-hidden">{info.especificacion}</li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </main>
+</Layout>

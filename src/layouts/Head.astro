@@ -1,0 +1,42 @@
+---
+const {
+  title = "Security Cars | Seguridad y Accesorios para Autos en Lima",
+  description = "Security Cars ofrece sistemas de seguridad, GPS, alarmas, cámaras de retroceso, luces LED, alzavidrios y audio para autos en Lima Metropolitana. Instalación a domicilio y en taller. Cotiza hoy.",
+  keywords = ["sistemas de seguridad para autos", "gps para autos lima", "alarmas para autos", "corte corriente auto", "alzavidrios electricos", "luces led para autos", "cierre centralizado", "camaras de retroceso", "insonorizacion de auto", "parlantes y audio para carros", "security cars lima"],
+  image = "/favicon.ico",
+  url = "https://securitycars.com",
+} = Astro.props;
+
+// Validar y convertir keywords a array si es string
+const keywordsArray = typeof keywords === 'string' ? [keywords] : Array.isArray(keywords) ? keywords : [];
+const keywordsString = keywordsArray.join(", ");
+---
+
+<!-- SEO básico -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywordsString} />
+<link rel="canonical" href={url} />
+
+<!-- Open Graph (Facebook, WhatsApp, etc.) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:url" content={url} />
+<meta property="og:locale" content="es_ES" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+
+<!-- Icono -->
+<link rel="icon" href="/favicon.ico" />
+
+<!-- Extras importantes -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<meta name="language" content="es" />
+<meta name="robots" content="index, follow" />

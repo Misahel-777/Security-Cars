@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import MarkdownIt from "markdown-it";
+import matter from "gray-matter";
+import fs from "fs";
+import path from "path";
+
+// Obtener slug de la URL
+const { slug } = Astro.params;
+
+// Leer el archivo markdown
+const filePath = path.join(process.cwd(), "src/content/blog", `${slug}.md`);
+const fileContent = fs.readFileSync(filePath, "utf-8");
+const { data, content } = matter(fileContent);
+
+// Renderizar markdown a HTML
+const md = new MarkdownIt();
+let htmlContent = md.render(content);
+
+// Centrar imágenes agregando estilos inline
+htmlContent = htmlContent.replace(
+  /<p><img/g,
+  '<p style="text-align: center;"><img style="max-width: 85%; margin: 0 auto; display: block; border-radius: 0.5rem;"'
+);
+
+// Generar lista de paths estáticos
+export async function getStaticPaths() {
+  const blogDir = path.join(process.cwd(), "src/content/blog");
+  const files = fs.readdirSync(blogDir).filter(f => f.endsWith(".md"));
+  console.log("FILES:", files);
+  return files.map(file => ({
+    params: { slug: file.replace(".md", "") }
+  }));
+}
+---
+
+<Layout
+  title={data.title}
+  description={data.description}
+  keywords={data.keywords || data.category}
+  image={data.image || "/images/default-blog.jpg"}
+  url={`https://securitycars.com/blog/${slug}`}
+>
+  <main class="max-w-[960px] flex justify-center items-center mx-auto p-3 sm:p-9">
+    <!-- Contenido del post -->
+    <article class="prose" set:html={htmlContent} />
+  </main>
+</Layout>
+
+<style>
+.prose {
+  width: 100%;
+  max-width: 100%;
+}
+
+.prose {
+  color: black
+}
+
+.prose > * {
+  margin-bottom: 1.5rem;
+}
+
+/* Centrar solo las imágenes */
+.prose img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 85% !important;
+  height: auto !important;
+  border-radius: 0.5rem;
+}
+
+/* Centrar párrafo que contiene la imagen */
+.prose p:has(img) {
+  text-align: center;
+}
+</style>

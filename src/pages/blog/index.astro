@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/PostCard.astro";
+import matter from "gray-matter";
+import fs from "fs";
+import path from "path";
+
+// Leer todos los archivos markdown de la carpeta blog
+const blogDir = path.join(process.cwd(), "src/content/blog");
+const files = fs.readdirSync(blogDir).filter(f => f.endsWith(".md"));
+
+// Parsear cada archivo
+const posts = files.map(file => {
+  const content = fs.readFileSync(path.join(blogDir, file), "utf-8");
+  const { data, content: body } = matter(content);
+  return {
+    slug: file.replace(".md", ""),
+    ...data,
+    body
+  };
+});
+
+// Ordenar por fecha (más reciente primero)
+posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+---
+
+<Layout
+  title="Blog | Security Cars"
+  description="Consejos, guías y novedades sobre seguridad para autos"
+  url="https://securitycars.com/blog"
+>
+  <main class="max-w-5xl mx-auto p-3 sm:p-9">
+    <header class="mb-9">
+      <h1 class="text-[48px] mb-0.5-">Blog</h1>
+    </header>
+
+    <section class="max-w-[900px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {posts.length > 0 ? (
+        posts.map((post) => (
+          <PostCard
+            title={post.title}
+            description={post.description}
+            image={post.image}
+            slug={post.slug}
+          />
+        ))
+      ) : (
+        <p style="grid-column: 1/-1; text-align: center; color: #999;">
+          No hay posts disponibles en este momento.
+        </p>
+      )}
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,469 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import { History, Speaker, ThermometerSun, Gem, Car, Star, VolumeX, Snowflake, AudioLines, ShieldCheck, HeartPulse, Sparkles, ChevronDown, MessageSquareText } from '@lucide/astro';
+
+const cards = [
+  {
+    icon: "history",
+    title: "Auto antiguo",
+    description: "Reduce vibraciones de motor y ruidos de carrocería típicos del tiempo.",
+  },
+  {
+    icon: "speaker",
+    title: "Car audio",
+    description: "Elimina cancelaciones acústicas y resalta la fidelidad de tus parlantes.",
+  },
+  {
+    icon: "thermostat",
+    title: "Lima Heat",
+    description: "Bloquea el calor radiante del asfalto y el techo en veranos intensos.",
+  },
+  {
+    icon: "diamond",
+    title: "Premium feel",
+    description: "Obtén el silencio de un Mercedes en cualquier vehículo de gama media.",
+  },
+  {
+    icon: "commute",
+    title: "Ride-share",
+    description: "Menos fatiga para conductores y mayor confort para tus pasajeros.",
+  },
+];
+
+const steps = [
+  {
+    title: "Diagnóstico",
+    description:
+      "Evaluamos las zonas de mayor filtración de ruido y calor en tu unidad.",
+  },
+  {
+    title: "Desarmado",
+    description:
+      "Técnicos certificados desmontan tapices y piezas con herramientas especializadas.",
+  },
+  {
+    title: "Aplicación",
+    description:
+      "Instalamos capas de Butilo, CCF y MLV según la zona técnica específica.",
+  },
+  {
+    title: "Prueba Final",
+    description:
+      "Verificamos el ensamble perfecto y medimos la reducción de decibeles.",
+  },
+];
+
+const benefits = [
+  {
+    icon: "volume_off",
+    title: "Menos ruido",
+    description:
+      "Reducción de hasta 8dB en cabina, lo que se traduce en un 50% menos de ruido percibido.",
+  },
+  {
+    icon: "ac_unit",
+    title: "Interior fresco",
+    description:
+      "Mantiene la temperatura interior por más tiempo, reduciendo el uso del aire acondicionado.",
+  },
+  {
+    icon: "equalizer",
+    title: "Audio de Calidad",
+    description:
+      "Convierte tus puertas en cajas acústicas selladas para un bajo profundo y voces claras.",
+  },
+  {
+    icon: "shield_lock",
+    title: "Cero Ruidos Extraños",
+    description:
+      'Elimina los molestos "grillos" y vibraciones de plásticos internos mal ajustados.',
+  },
+  {
+    icon: "health_and_safety",
+    title: "Salud y Relax",
+    description:
+      "El ruido excesivo genera estrés. Conduce más tranquilo y llega menos cansado.",
+  },
+  {
+    icon: "auto_awesome",
+    title: "Valor de Reventa",
+    description:
+      "Un auto silencioso y bien tratado siempre mantiene mejor su valor en el mercado.",
+  },
+];
+
+const projects = [
+  {
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA73UZOkujSWv7vT05K-eL0XNklKnjziRiZmg_EA5bzV1NqjpoIbQL9_qmEacVSKfKYbC9X1RdvoqxyOUVoqss8LpNpQZXStoB8iufGS0EHOPN_Bp4u_6pAhSd2KvtLvoZS2LlrgcsZ8X1Re4ED7fpBZYUu4gpegIQygGpRI6kVI6urWEMxsF64j1HrnpZt6PUbQqhtOg6F_nhFEFNmcqQECDXSYXKCY4HmTHiLl7yTWKX-tI4TnfAlIoicCZDIr0Ir7icv2ZEmC4U",
+    alt: "Detailed professional close-up of a vehicle's door panel being treated with premium silver butyl vibration dampening sheets.",
+    title: "Toyota Hilux 2024",
+    description: "Tratamiento de puertas 3 capas",
+  },
+  {
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCBjINcPT0epj5Aa_rV3utWEt0f6nBmvafrlTRQdz_NFjMgIrsueubYnikFIG-MchjXK8ihVt0caNfPoeFRH5JPVmPiuDGfNtFLi8D_asyTMBdaARBQR_tLsxLc6bNePvDzn-kW2x59DqDnFLCjGY1BkTxnvxaDUUxLCv6lIwfkZKftIBVGZvUdkTLxIVfdMHvJLBZdqrkEY0vt08bnJl6Ezc6YAlMubm9I0Ft9O9Bd5mcX2mJaRTt_U2Szi00A35O-DiEifwS_Aos",
+    alt: "A wide-angle professional shot of a luxury SUV interior during a full soundproofing project.",
+    title: "BMW X5",
+    description: "Insonorización total de habitáculo",
+  },
+  {
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAgXHe4-E20_MG2S11GK6bBOdZ-TzwNfpAN3blBYXzOtPgxKLKGx8OOCKYJZ2VMCO5YuY4lijzxzSfQqg9pl02RcdB-a0XkLY_2cIY3x7TBfgcx4oy8o8X-Jz_BUsILQpCAVvgT4L6oz1ZMpi7i9in1PESsUeCYW87-bLd2ON1ttMEslH_IcJBorbmb3zgL7zfpLoYyMlKTOnPm1-ahA3KpU7jKvtv4GpqGjakJVCwOqsGUw2rKNlNqIM4SAdql6jeMgsWCOLinGfs",
+    alt: "Macro photography focusing on the texture of acoustic foam and specialized MLV mats being installed in a vehicle's roof.",
+    title: "Audi A4",
+    description: "Tratamiento térmico de techo",
+  },
+];
+
+const testimonials = [
+  {
+    rating: 5,
+    quote:
+      "El cambio en mi Mazda fue increíble. Ahora mi música suena como en un estudio y el ruido de la Javier Prado ya no me estresa.",
+    name: "Ricardo M.",
+    details: "San Borja | Mazda CX-5",
+  },
+  {
+    rating: 5,
+    quote:
+      "Excelente trato y materiales. El calor en el habitáculo bajó muchísimo, se nota la diferencia apenas entras al auto después de dejarlo al sol.",
+    name: "Carla V.",
+    details: "La Molina | Toyota Prado",
+  },
+  {
+    rating: 5,
+    quote:
+      "Muy profesional. El desarme fue impecable, no quedó ni un solo ruido de plásticos. Vale cada sol la inversión.",
+    name: "Luis F.",
+    details: "Surco | Honda Civic",
+  },
+];
+
+const faqs = [
+  {
+    question: "¿Cuánto tiempo demora el proceso?",
+    answer:
+      "Depende del paquete. Un tratamiento de puertas toma 4-5 horas. Un tratamiento full habitáculo demora entre 2 a 3 días hábiles.",
+  },
+  {
+    question: "¿Afecta la garantía de mi auto nuevo?",
+    answer:
+      "No. No realizamos cortes de cables ni modificaciones estructurales. Nuestros materiales son inertes y el proceso es 100% reversible si se requiere.",
+  },
+  {
+    question: "¿Añade mucho peso al vehículo?",
+    answer:
+      "Un tratamiento completo añade entre 25 a 40kg, equivalente a llevar un niño pequeño o medio tanque de gasolina. No afecta el consumo de combustible de forma perceptible.",
+  },
+  {
+    question: "¿Los materiales tienen olor?",
+    answer:
+      "No. Usamos materiales certificados sin derivados de asfalto. No emiten olores ni gases, incluso bajo exposición directa al sol de Lima.",
+  },
+];
+---
+
+
+<Layout>
+    <main>
+<div class="bg-[#f8f9ff] text-[#181c22] font-body-md overflow-x-hidden">
+
+    <!-- Section 01: Hero -->
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[#01235799] z-10"></div>
+            <img class="w-full h-full object-cover" data-alt="h" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbu4_m3M6hk6-1HqGcJNV6M6MZvFLOQhDEK416-6nyzWMSPEnqnRWbH-E1PVfIVd-16Jy0IYut5Y57KQ02c31rApMbY-2xihtRgmqToNEUiWGZGzGnNdUqWS895mbJaSEPmQijek9s25ra6lF8BIs63yadVa-Ccf4BXs0lsd9fJnnnNlqJ6zPiDGDYTW6b_Nqx9MdAAlmtck8BgyyHmaK8f2Fpdhp-k6Ei4-fozOk2ejt_20WjAyUvRHLtcirIRy1i81rOxj3s5ec" />
+        </div>
+        <div class="relative z-20 mx-auto max-w-[1200px] pl-6 pr-6 w-full text-white">
+            <div class="max-w-2xl">
+                <h1 class="font-display-h1 text-[35px] leading-[50px] lg:text-[64px] lg:leading-[72px] mb-6">Insonorización para autos en <span class="text-[#3de273]">Lima</span></h1>
+                <p class="text-body-lg mb-10">Sin ruido, sin calor, sin sorpresas. Transformamos tu cabina en un santuario de paz y acústica perfecta.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a class="bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold text-center flex items-center justify-center gap-2 hover:brightness-110 transition-all" href="https://wa.me/51907300174">Cotiza gratis por WhatsApp</a>
+                    <a class="border border-white text-white px-8 py-4 rounded-lg font-bold text-center hover:bg-white-10 transition-all" href="#galeria">Ver trabajos realizados</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 02: Social Proof Bar -->
+    <section class="bg-[#F5F5F0] py-12">
+        <div class="max-w-[1200px] mx-auto pl-6 pr-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="flex flex-col items-center text-center">
+                <div class="flex items-center gap-1 text-[#2c457a] mb-1">
+                <!-- Aquí está el cambio: usamos el componente Star con fill="currentColor" -->
+        <Star className="w-5 h-5 text-yellow-500" fill="currentColor" />
+        <span class="font-label-caps text-label-caps">4.9/5.0 Google</span>
+    </div>
+    <p class="text-[#44464f] text-sm">Reseñas Reales</p>
+</div>
+            <div class="flex flex-col items-center text-center">
+                <span class="font-label-caps text-label-caps text-[#012357] mb-1">20+ AÑOS EXP</span>
+                <p class="text-[#44464f] text-sm">Técnicos Especialistas</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <span class="font-label-caps text-label-caps text-[#012357] mb-1">TRABAJO GARANTIZADO</span>
+                <p class="text-[#44464f] text-sm">Post-venta Premium</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <span class="font-label-caps text-label-caps text-[#012357] mb-1">LA MOLINA, LIMA</span>
+                <p class="text-[#44464f] text-sm">Sede Central</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 03: Who is it for -->
+    <section class="py-section-padding-desktop bg-[#f8f9ff]" id="servicios">
+        <div class="max-w-[1200px] mx-auto pl-6 pr-6">
+            <div class="text-center mb-16 reveal">
+                <span class="font-label-caps text-label-caps text-[#1f6298] uppercase tracking-widest">¿Para quién es?</span>
+                <h2 class="font-headline-lg text-headline-lg mt-4">Soluciones a medida para cada conductor</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+  {cards.map((card, index) => (
+    <div class="bg-[#f8f9ff]-container-lowest p-8 rounded-xl custom-shadow reveal">
+      
+      {/* 2. Reemplazamos el <span> por la lógica de renderizado condicional */}
+      {card.icon === 'history' && <History className="w-9 h-9 text-[#012357] mb-4" />}
+      {card.icon === 'speaker' && <Speaker className="w-9 h-9 text-[#012357] mb-4" />}
+      {card.icon === 'thermostat' && <ThermometerSun className="w-9 h-9 text-[#012357] mb-4" />}
+      {card.icon === 'diamond' && <Gem className="w-9 h-9 text-[#012357] mb-4" />}
+      {card.icon === 'commute' && <Car className="w-9 h-9 text-[#012357] mb-4" />}
+
+      <h3 class="font-bold mb-2">{card.title}</h3>
+
+      <p class="text-[#44464f] text-sm">
+        {card.description}
+      </p>
+    </div>
+  ))}
+</div>
+</div>
+        </div>
+    </section>
+
+    <!-- Section 04: Process -->
+    <section class="py-section-padding-desktop bg-[#012357] text-white overflow-hidden relative">
+        <div class="max-w-[1200px] mx-auto pl-6 pr-6 relative z-10">
+            <div class="mb-16 reveal">
+                <span class="font-label-caps text-label-caps text-[#8da5e0] uppercase">Nuestro Proceso</span>
+                <h2 class="font-headline-lg text-headline-lg mt-4">Ingeniería Acústica en 4 Pasos</h2>
+            </div>
+            <div class="relative grid grid-cols-1 md:grid-cols-4 gap-20">
+                {steps.map((step, index) => (
+    <div class="relative flex flex-col gap-4">
+    <div class="text-8xl font-bold text-white/10 absolute -top-8 -left-4">{String(index + 1).padStart(2, "0")}</div>
+    <div class="mt-17">
+    <h3 class="font-bold text-lg">{step.title}</h3>
+    <p class="text-[#8da5e0] text-sm">{step.description}</p>
+    </div>
+    </div>
+  ))}
+</div>
+        </div>
+    </section>
+
+    <!-- Section 05: Zones & Materials -->
+    <section class="py-section-padding-desktop bg-[#f8f9ff]">
+        <div class="max-w-[1200px] mx-auto pl-6 pr-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <h2 class="font-headline-lg text-headline-lg mb-8">Zonas de Tratamiento</h2>
+                    <div class="overflow-hidden rounded-xl border border-[#c4c6d1]">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="bg-[#e5e8f1]">
+                                <tr>
+                                    <th class="p-4 font-label-caps text-label-caps">Zona</th>
+                                    <th class="p-4 font-label-caps text-label-caps">Beneficio Principal</th>
+                                </tr>
+                            </thead>
+                            <tbody class=" border-[#c4c6d1]">
+                                <tr>
+                                    <td class="p-4 font-bold">Puertas (4)</td>
+                                    <td class="p-4 text-[#44464f]">Mejora audio y reduce ruido de tráfico.</td>
+                                </tr>
+                                <tr class="bg-[#f8f9ff]-container-low">
+                                    <td class="p-4 font-bold">Piso Completo</td>
+                                    <td class="p-4 text-[#44464f]">Elimina ruido de rodadura y motor.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-bold">Techo</td>
+                                    <td class="p-4 text-[#44464f]">Aislamiento térmico y ruido de lluvia.</td>
+                                </tr>
+                                <tr class="bg-[#f8f9ff]-container-low">
+                                    <td class="p-4 font-bold">Maletera / Tolva</td>
+                                    <td class="p-4 text-[#44464f]">Reduce eco y vibraciones traseras.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <h3 class="font-headline-md text-headline-md mb-6">Materiales de Grado Aeroespacial</h3>
+                    <p class="text-[#44464f] mb-8">No usamos asfalto barato ni esponjas domésticas. Solo componentes diseñados para la industria automotriz:</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-[#afc6ff] text-[#2c457a] px-6 py-3 rounded-full font-label-caps text-label-caps">Butilo Multicapa</div>
+                        <div class="bg-[#d0e4ff] text-[#004a7a] px-6 py-3 rounded-full font-label-caps text-label-caps">Espuma CCF (Celda Cerrada)</div>
+                        <div class="bg-[#5bfc86] text-[#002109] px-6 py-3 rounded-full font-label-caps text-label-caps">Mass Loaded Vinyl (MLV)</div>
+                        <div class="bg-[#dfe2eb] px-6 py-3 rounded-full font-label-caps text-label-caps">Aislante de Aluminio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 06: Benefits Grid -->
+    <section class="py-section-padding-desktop bg-[#F5F5F0]">
+        <div class="max-w-[1200px] mx-auto pl-6 pr-6">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg">¿Por qué Security Cars?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  {benefits.map((benefit, index) => (
+    <div class="flex gap-4 items-start">
+      
+      {/* Contenedor blanco del icono */}
+      <div class="bg-white p-3 rounded-lg custom-shadow flex-shrink-0">
+        
+        {/* 2. Lógica de iconos Lucide (w-6 h-6 equivale al tamaño por defecto de Material Symbols) */}
+        {benefit.icon === 'volume_off' && <VolumeX className="w-6 h-6 text-[#012357]" />}
+        {benefit.icon === 'ac_unit' && <Snowflake className="w-6 h-6 text-[#012357]" />}
+        {benefit.icon === 'equalizer' && <AudioLines className="w-6 h-6 text-[#012357]" />}
+        {benefit.icon === 'shield_lock' && <ShieldCheck className="w-6 h-6 text-[#012357]" />}
+        {benefit.icon === 'health_and_safety' && <HeartPulse className="w-6 h-6 text-[#012357]" />}
+        {benefit.icon === 'auto_awesome' && <Sparkles className="w-6 h-6 text-[#012357]" />}
+
+      </div>
+
+      <div>
+        <h4 class="font-bold text-lg mb-2">
+          {benefit.title}
+        </h4>
+
+        <p class="text-[#44464f] text-sm">
+          {benefit.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+</div>
+        </div>
+    </section>
+
+    <!-- Section 08: Gallery -->
+    <section class="py-section-padding-desktop bg-[#0D1117] text-white" id="galeria">
+        <div class="max-w-[1200px] mx-auto pl-6 pr-6">
+            <div class="mb-12 flex justify-between items-end">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg">Nuestros Trabajos</h2>
+                    <p class="text-[#999ba2b3] mt-2">Acabados impecables con materiales premium.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  {projects.map((project, index) => (
+    <div class="relative group overflow-hidden rounded-2xl aspect-[4/3] reveal" >
+      <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        src={project.image}
+        alt={project.alt}
+      />
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+        <span class="font-label-caps text-label-caps text-[#d2ebff] mb-1">
+          {project.title}
+        </span>
+
+        <p class="text-sm">
+          {project.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+        </div>
+    </section>
+
+    <!-- Section 09: Testimonials -->
+    <section class="py-section-padding-desktop bg-[#F5F5F0]">
+        <div class="max-w-[1200px] mx-auto pl-6 pr-6">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg">Opiniones de Clientes</h2>
+            </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  {testimonials.map((testimonial, index) => (
+    <div class="bg-white p-8 rounded-xl custom-shadow" >
+      
+      <div class="flex text-yellow-500 mb-4">
+        {Array.from({ length: testimonial.rating }).map(() => (
+          // 2. Reemplazamos el span por el SVG de Lucide
+          // Nota: fill="currentColor" es clave para que la estrella esté sólida, no solo el contorno
+          <Star className="w-5 h-5" fill="currentColor" />
+        ))}
+      </div>
+
+      <p class="text-on-surface mb-6 italic">
+        "{testimonial.quote}"
+      </p>
+
+      <div>
+        <h5 class="font-bold">{testimonial.name}</h5>
+
+        <p class="text-[#44464f] text-xs font-label-caps">
+          {testimonial.details}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+        </div>
+    </section>
+
+    <!-- Section 11: FAQ -->
+    <section class="py-section-padding-desktop bg-[#f1f3fc]">
+        <div class="max-w-3xl mx-auto pl-6 pr-6">
+            <div class="text-center mb-12">
+                <h2 class="font-headline-lg text-headline-lg">Preguntas Frecuentes</h2>
+            </div>
+            <div class="space-y-4">
+  {faqs.map((faq, index) => (
+    <details
+      class="group bg-white rounded-xl border border-[#c4c6d14d] overflow-hidden"
+      
+    >
+      <summary class="p-6 cursor-pointer font-bold flex justify-between items-center list-none">
+        {faq.question}
+        <ChevronDown className="w-6 h-6 transition-transform group-open:rotate-180 flex-shrink-0" />
+        
+      </summary>
+
+      <div class="px-6 pb-6 text-[#44464f]">
+        {faq.answer}
+      </div>
+    </details>
+  ))}
+</div>
+        </div>
+    </section>
+
+    <!-- Section 12: Final CTA -->
+    <section class="py-section-padding-desktop bg-[#012357] text-white overflow-hidden">
+        <div class="max-w-[1200px] mx-auto pl-6 pr-6 text-center relative z-10">
+            <div>
+                <h2 class="font-display-h1 text-[35px] leading-[50px] lg:text-[64px] lg:leading-[72px] mb-6">¿Listo para conducir en silencio?</h2>
+                <p class="text-body-lg mb-12  opacity-80 max-w-2xl mx-auto">
+                    Únete a los cientos de clientes satisfechos en Lima que ya disfrutan de una cabina premium.
+                </p>
+<a class="bg-[#25D366] text-white px-10 py-5 rounded-lg font-bold text-xl inline-flex items-center gap-3 hover:scale-105 transition-all shadow-xl" href="https://wa.me/51907300174">
+  <MessageSquareText className="w-7 h-7"  />
+  
+  Cotizar por WhatsApp Ahora
+</a>
+                <p class="mt-6 text-sm text-[#acadb399]">Atención inmediata | Presupuesto personalizado</p>
+            </div>
+        </div>
+    </section>
+</div>
+</main>
+</Layout>
