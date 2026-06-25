@@ -8,7 +8,7 @@ import { Menu, X } from '@lucide/astro';
           {/* LOGO */}
           <div class="flex items-center">
             <a href="/#inicio">
-              <img src="/logo.webp" alt="Security Cars" class="rounded-full w-[50px]"/>
+              <img src="/logo.webp" alt="Security Cars" class="rounded-full" width="50" height="50"/>
             </a>
           </div>
 
@@ -49,7 +49,7 @@ import { Menu, X } from '@lucide/astro';
     </header>
 
 
-    <script>
+ <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
@@ -60,24 +60,29 @@ import { Menu, X } from '@lucide/astro';
 
     let isOpen = false;
 
+    // Función reutilizable para cerrar el menú
+    function closeMenu() {
+      menu.classList.add('hidden');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      isOpen = false;
+    }
+
     btn.addEventListener('click', () => {
       isOpen = !isOpen;
-
       menu.classList.toggle('hidden');
-
-      // Cambiar iconos
       iconMenu.classList.toggle('hidden');
       iconClose.classList.toggle('hidden');
     });
 
     // Cerrar menú al hacer click en links
     menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden');
-        iconMenu.classList.remove('hidden');
-        iconClose.classList.add('hidden');
-        isOpen = false;
-      });
+      link.addEventListener('click', closeMenu);
     });
+
+    // Cerrar menú al hacer scroll
+    window.addEventListener('scroll', () => {
+      if (isOpen) closeMenu();
+    }, { passive: true });
   });
 </script>

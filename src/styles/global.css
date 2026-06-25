@@ -14,7 +14,7 @@ html, body { height: 100dvh; padding: 0; margin: 0}
 
 a { text-decoration: none}
 
-body { display: flex; flex-direction: column; min-height: 100vh; font-family: 'rubik', sans-serif; color: black}
+body { display: flex; flex-direction: column; min-height: 100vh; font-family: 'rubik', sans-serif; color: black; max-width: 1400px; margin: 0 auto;}
 
 main { flex: 1}
 

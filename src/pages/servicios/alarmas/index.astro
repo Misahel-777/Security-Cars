@@ -94,15 +94,12 @@ const layoutProps = {
 };
 ---
 <Layout {...layoutProps}>
-    <section class="relative h-[70vh] md:min-h-screen flex items-center">
+    <section class="relative flex flex-col justify-center items-center">
 
-      {/* imgn */}
-      <div class="absolute inset-0">
-        <img src="/alarmahero.webp" alt="Alarma para autos" class="w-full h-full object-cover" />
+        <img src="/alarmahero.webp" alt="Alarma para autos" class="w-full object-cover h-[720px]" />
         <div class="absolute inset-0 bg-black/80"></div>
-      </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="absolute z-10 max-w-7xl mx-auto px-6">
         <div class="max-w-3xl">
           <header><h1 class="text-5xl text-center text-white mb-6">Alarma para autos</h1></header>
         </div>
@@ -110,13 +107,13 @@ const layoutProps = {
     </section>
 
       {/* PRODUCTOS */}
-      <main class="py-16">
+      <main class="py-20">
         <div class="max-w-7xl mx-auto px-4 space-y-20">
           {productos.map((producto) => (
             <article class="grid md:grid-cols-2 gap-10 items-start">
               {/* imgN */}
               <figure class="relative rounded-lg overflow-hidden">
-                <img src={producto.imgn} alt="imgn de la alarma" class="w-full h-[200px] md:h-[300px] object-contain"/>
+                <img src={producto.imgn} alt="Equipo de la alarma" class="w-full h-[200px] md:h-[300px] object-contain"/>
               </figure>
 
               {/* CONTENIDO */}

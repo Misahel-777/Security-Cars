@@ -135,3 +135,85 @@ export function generateServiceSchemas(service) {
   // Devolvemos solo los que no sean null
   return [serviceSchema, webpageSchema, breadcrumbSchema, faqSchema].filter(Boolean);
 }
+
+
+
+
+
+
+
+export function generateArticleSchemas(article) {
+  const {
+    slug,
+    title,
+    description,
+    image,
+    author = "Security Cars",
+    publishedDate = "2025-06-01T00:00:00-05:00",
+    modifiedDate = new Date().toISOString(),
+    faq = [],
+  } = article;
+
+  const url = `${DOMAIN}/blog/${slug}`;
+
+  // ----- BlogPosting -----
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}/#article`,
+    headline: title,
+    description: description,
+    image: { "@type": "ImageObject", url: image, width: 1200, height: 630 },
+    author: { "@type": "Organization", name: author, "@id": `${DOMAIN}/#localbusiness` },
+    publisher: { "@id": `${DOMAIN}/#localbusiness` },
+    datePublished: publishedDate,
+    dateModified: modifiedDate,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${url}/#webpage` },
+    inLanguage: "es-PE",
+  };
+
+  // ----- WebPage -----
+  const webpageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}/#webpage`,
+    url: url,
+    name: title,
+    description: description,
+    inLanguage: "es-PE",
+    isPartOf: { "@type": "WebSite", "@id": `${DOMAIN}/#website`, name: BUSINESS.name },
+    primaryImageOfPage: { "@type": "ImageObject", url: image, width: 1200, height: 630 },
+    datePublished: publishedDate,
+    dateModified: modifiedDate,
+    breadcrumb: { "@id": `${url}/#breadcrumb` },
+  };
+
+  // ----- Breadcrumb -----
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${url}/#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: DOMAIN },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${DOMAIN}/blog` },
+      { "@type": "ListItem", position: 3, name: title, item: url },
+    ],
+  };
+
+  // ----- FAQPage (solo si hay preguntas) -----
+  let faqSchema = null;
+  if (faq.length > 0) {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": `${url}/#faqpage`,
+      mainEntity: faq.map((q) => ({
+        "@type": "Question",
+        name: q.question,
+        acceptedAnswer: { "@type": "Answer", text: q.answer },
+      })),
+    };
+  }
+
+  return [articleSchema, webpageSchema, breadcrumbSchema, faqSchema].filter(Boolean);
+}

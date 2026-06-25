@@ -10,9 +10,9 @@ const whatsappText = encodeURIComponent(
 
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 ---
-    <section class="relative min-h-screen flex items-center  overflow-hidden">
+    <section class="relative h-[720px] flex items-center overflow-hidden">
         <div class="absolute inset-0">
-            <img src="/hero.webp" alt="Interior del auto" class="object-cover w-full h-full"/>
+            <img src="/hero.webp" alt="Interior del auto" class="object-cover w-full h-full" fetchpriority=high />
         </div>
       <!-- Overlay oscuro + azul -->
       <div class="absolute inset-0 hero-overlay"></div>
