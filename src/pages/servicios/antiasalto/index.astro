@@ -2,6 +2,19 @@
 import Layout from '../../../layouts/Layout.astro';
 import { ChevronDown } from '@lucide/astro';
 
+import {
+  getServiceSchemasByKey
+} from '../../../data/services-data.js';
+
+import {
+  getLocalBusinessSchema
+} from '../../../data/schemas.js';
+
+const serviceSchemas = [
+  getLocalBusinessSchema(),
+  ...getServiceSchemasByKey('antiasalto')
+];
+
 const features = [
   {
     title: "Inmovilización del vehículo por estacionamiento",
@@ -49,10 +62,27 @@ const whatsappText = encodeURIComponent(
 );
 
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+const seo = {
+  title: "Antiasalto para Auto en Lima | Security Cars La Molina",
+  description: "Sistema antiasalto con corta corriente inteligente en La Molina. Si te bajan del auto, el motor se apaga solo al minuto y medio. Bloqueo por estacionamiento y modo Valet. Garantizado.",
+  keywords: ["antiasalto para auto", "corta corriente para auto", "corta corriente auto", "antiasalto por proximidad", "corta corriente a distancia para auto", "corta corriente automotriz", "corta corriente auto instalado", "cortacorriente para auto", "corta corriente antirrobo", "sistema antiasalto vehicular lima"],
+  image: "/og-antiasalto.webp",
+  alt: "Instalación de sistema antiasalto con corta corriente en La Molina, Lima",
+  url: "https://securitycars.com/antiasalto",
+  ogTitle: "Si te asaltan, el auto no se lo llevan — Antiasalto Security Cars",
+  ogDescription: "Corta corriente inteligente en La Molina. El motor se apaga solo si te bajan del vehículo. Protección real para taxistas y propietarios de flota.",
+  twitterTitle: "Antiasalto para Auto en Lima | Security Cars La Molina",
+  twitterDescription: "Corta corriente inteligente: si te bajan del auto, el motor se apaga solo. La Molina, Lima. WhatsApp: 907 300 174",
+};
+
+const layoutProps = {
+  ...seo,
+  structuredData: serviceSchemas,
+  preloadImage: seo.image,
+};
 ---
-<Layout title="Anti-asalto para Auto | Security Cars"
-        description ="Protege tu auto contra robos y asaltos con un sistema corta corriente inteligente. Bloquea el encendido del vehículo y ayuda a detenerlo de forma segura si intentan llevárselo. Seguridad práctica y confiable para tu tranquilidad diaria."
-        keywords = "antiasalto, corta corriente, corta corriente para auto, corta corriente auto, corta corriente para carro, cortacorrientes para autos, corta corriente para auto precio, corta corriente a distancia, corta corriente para autos a distancia, antiasalto por proximidad, corta corriente a distancia para auto, corta corriente a distancia precio, corta corriente auto a domicilio, corta corriente auto instalado, corta corriente automotriz">
+<Layout {...layoutProps}>
     <section class="relative min-h-screen flex items-center">
 
       {/* imgn */}

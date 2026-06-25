@@ -2,6 +2,19 @@
 import Layout from '../../../layouts/Layout.astro';
 import { Lock, Volume2, AlertTriangle, Settings, Wrench, Cable, CheckCircle } from '@lucide/astro';
 
+import {
+  getServiceSchemasByKey
+} from '../../../data/services-data.js';
+
+import {
+  getLocalBusinessSchema
+} from '../../../data/schemas.js';
+
+const serviceSchemas = [
+  getLocalBusinessSchema(),
+  ...getServiceSchemasByKey('pestillos')
+];
+
 const serviceData = {
   problems: [
     {
@@ -63,11 +76,28 @@ const whatsappText = encodeURIComponent(
 );
 
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+
+const seo = {
+  title: "Pestillos Eléctricos y Cierre Centralizado en Lima | Security Cars",
+  description: "Reparación e instalación de pestillos eléctricos y cierre centralizado en La Molina. Puertas que no cierran, seguros con ruido o intermitentes. Universal para 2, 4 y 5 puertas. Garantizado.",
+  keywords: ["pestillos electricos para autos", "cierre centralizado para autos", "cierre centralizado universal", "reparacion cierre centralizado auto", "cierre centralizado 4 puertas", "cierre centralizado instalado", "precio de cierre centralizado", "cierre centralizado de puertas", "instalacion cierre centralizado auto", "seguros electricos para autos"],
+  image: "https://securitycars.com/img/og-pestillos.jpg",
+  alt: "Instalación de cierre centralizado y pestillos eléctricos en La Molina, Lima",
+  url: "https://securitycars.com/pestillos",
+  ogTitle: "¿Una puerta no cierra con el mando? Lo resolvemos — Security Cars",
+  ogDescription: "Reparación e instalación de cierre centralizado en La Molina. Universal para 2, 4 y 5 puertas. Sin consumo de batería, trabajo garantizado.",
+  twitterTitle: "Cierre Centralizado y Pestillos Eléctricos | Security Cars Lima",
+  twitterDescription: "Cierre centralizado universal para 2, 4 y 5 puertas en La Molina. Reparación e instalación garantizada. WhatsApp: 907 300 174",
+};
+
+const layoutProps = {
+  ...seo,
+  structuredData: serviceSchemas,
+  preloadImage: seo.image,
+};
 ---
-<Layout title="Alarma para Auto | Security Cars"
-        description ="Mejoramos la seguridad y comodidad de tu vehículo con servicio profesional de reparación e instalación de pestillos eléctricos. Trabajamos con todo tipo de autos, garantizando un funcionamiento rápido, seguro y confiable."
-        keywords = "cierre centralizado, cierre centralizado universal, cierre centralizado auto, cierre centralizado para autos,cierre centralizado, cierre centralizado universal, cierre centralizado auto, cierre centralizado para autos
-">
+<Layout {...layoutProps}>
     <main >
       <!-- HERO -->
       <section class="bg-linear-to-r from-[#0343eb] to-[#0343eb]/80 text-white py-14 px-4">

@@ -2,6 +2,19 @@
 import Layout from '../../../layouts/Layout.astro';
 import { ChevronDown } from '@lucide/astro';
 
+import {
+  getServiceSchemasByKey
+} from '../../../data/services-data.js';
+
+import {
+  getLocalBusinessSchema
+} from '../../../data/schemas.js';
+
+const serviceSchemas = [
+  getLocalBusinessSchema(),
+  ...getServiceSchemasByKey('gps')
+];
+
 const features = [
   {
     title: "Corte de Motor Remoto",
@@ -56,11 +69,28 @@ const whatsappTextFull = encodeURIComponent(
 );
 
 const whatsappUrlFull = `https://wa.me/${whatsappNumber}?text=${whatsappTextFull}`;
+
+const seo = {
+  title: "GPS para Auto en Lima | Security Cars La Molina",
+  description: "GPS 4G para autos en La Molina: rastreo en tiempo real, corte de motor remoto y alertas al celular. Pago único de por vida, sin mensualidad. Compatible con flotas.",
+  keywords: ["gps para auto", "gps para vehiculos", "instalacion de gps para autos", "gps tracker para autos", "rastreo gps vehicular", "gps para autos sin mensualidad", "gps 4g para auto", "precio de gps para auto", "gps para auto con celular", "sistema gps para vehiculos"],
+  image: "/og-gps.webp",
+  alt: "Instalación de GPS 4G para auto en La Molina, Lima",
+  url: "https://securitycars.com/gps",
+  ogTitle: "Sabe dónde está tu auto en todo momento — GPS Security Cars",
+  ogDescription: "GPS 4G sin mensualidad para autos y flotas en La Molina. Rastreo en tiempo real y corte de motor desde tu celular. Pago único.",
+  twitterTitle: "GPS para Auto en Lima | Security Cars La Molina",
+  twitterDescription: "GPS 4G sin mensualidad. Rastreo en tiempo real y corte de motor remoto. La Molina, Lima. WhatsApp: 907 300 174",
+};
+
+const layoutProps = {
+  ...seo,
+  structuredData: serviceSchemas,
+  preloadImage: seo.image,
+};
 ---
 
-<Layout title="GPS para Auto | Security Cars"
-        description ="Protege tu inversión con nuestro GPS para auto de última generación. Localización en tiempo real, bloqueo de motor desde tu celular y alertas preventivas. ¡No dejes tu seguridad al azar, recupera el control de tu vehículo hoy mismo!"
-        keywords = "gps, gps para carros, gps para auto, gps para vehiculos, gps para camiones, gps para auto con celular, sistema de gps para vehiculos, servicio gps para autos, sistemas de gps para vehiculos, gps para vehículos, venta de gps para autos, comprar gps para auto, precio de gps para auto, gps para autos con corta corriente, instalacion gps auto, instalacion de gps para carros, gps 4g, instalacion gps para autos, gps 4g para auto, instalacion de gps para auto">
+<Layout {...layoutProps}>
     <section class="relative h-[70vh] md:min-h-screen flex items-center">
 
       {/* imgn */}

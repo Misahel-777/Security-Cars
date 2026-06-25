@@ -316,6 +316,16 @@ const getWhatsappLink = (title: string) => {
 
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <a href="/servicios/insonorizacion"  rel="noopener noreferrer">
+              <article class="group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 bg-white">
+                <figure class="relative h-48 overflow-hidden">
+                  <img src='/insonorizante.webp' alt="g" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+                </figure>
+                <header class="p-6 text-center w-full">
+                  <h2 class="font-bold text-lg text-black">Insonorizante</h2>
+                </header>
+              </article>
+            </a>
             {services.map((service) => (
               <article class="group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 bg-white" data-id={service.id}>
                 <figure class="relative h-48 overflow-hidden">
@@ -326,18 +336,6 @@ const getWhatsappLink = (title: string) => {
                 </header>
               </article>
             ))}
-            
-            
-            <a href="/servicios/insonorizacion"  rel="noopener noreferrer">
-              <article class="group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 bg-white">
-                <figure class="relative h-48 overflow-hidden">
-                  <img src='/insonorizante.webp' alt="g" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
-                </figure>
-                <header class="p-6 text-center w-full">
-                  <h2 class="font-bold text-lg text-black">Insonorizante</h2>
-                </header>
-              </article>
-            </a>
         </div>
         </div>
 

@@ -1,5 +1,17 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import {
+  getServiceSchemasByKey
+} from '../../../data/services-data.js';
+
+import {
+  getLocalBusinessSchema
+} from '../../../data/schemas.js';
+
+const serviceSchemas = [
+  getLocalBusinessSchema(),
+  ...getServiceSchemasByKey('insonorizacion')
+];
 
 import { History, Speaker, ThermometerSun, Gem, Car, Star, VolumeX, Snowflake, AudioLines, ShieldCheck, HeartPulse, Sparkles, ChevronDown, MessageSquareText } from '@lucide/astro';
 
@@ -163,10 +175,29 @@ const faqs = [
       "No. Usamos materiales certificados sin derivados de asfalto. No emiten olores ni gases, incluso bajo exposición directa al sol de Lima.",
   },
 ];
+
+const seo = {
+  title: "Insonorización de Autos en Lima | Security Cars La Molina",
+  description: "Insonorizamos tu auto en La Molina: sin ruidos, sin calor, sin vibraciones. Trabajo impecable, precios económicos. Escríbenos por WhatsApp.",
+  image: "og-insonorizante.webp",
+  alt:"Insonorización profesional de autos en Lima",
+  url: "https://securitycars.com/insonorizacion",
+  ogTitle: "Tu auto puede sonar diferente — Insonorización en Lima",
+  ogDescription: "Security Cars instala insonorizante profesional en La Molina. Sin ruidos, sin vibraciones, sin calor. Precios económicos y trabajo garantizado.",
+  twitterTitle: "Insonorización de Autos en Lima | Security Cars La Molina",
+  twitterDescription: "Sin ruidos, sin calor, sin vibraciones. Instalación profesional en La Molina, Lima. WhatsApp: 907 300 174",
+};
+
+// Pasar los schemas al Layout (como array)
+const layoutProps = {
+  ...seo,
+  structuredData: serviceSchemas, // <-- usamos los schemas generados
+  preloadImage: seo.image,
+};
 ---
 
 
-<Layout>
+<Layout {...layoutProps}>
     <main>
 <div class="bg-[#f8f9ff] text-[#181c22] font-body-md overflow-x-hidden">
 
@@ -174,7 +205,7 @@ const faqs = [
     <section class="relative min-h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-[#01235799] z-10"></div>
-            <img class="w-full h-full object-cover" data-alt="h" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbu4_m3M6hk6-1HqGcJNV6M6MZvFLOQhDEK416-6nyzWMSPEnqnRWbH-E1PVfIVd-16Jy0IYut5Y57KQ02c31rApMbY-2xihtRgmqToNEUiWGZGzGnNdUqWS895mbJaSEPmQijek9s25ra6lF8BIs63yadVa-Ccf4BXs0lsd9fJnnnNlqJ6zPiDGDYTW6b_Nqx9MdAAlmtck8BgyyHmaK8f2Fpdhp-k6Ei4-fozOk2ejt_20WjAyUvRHLtcirIRy1i81rOxj3s5ec" />
+            <img class="w-full h-full object-cover" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async" alt="Insonorización profesional de autos en Lima" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbu4_m3M6hk6-1HqGcJNV6M6MZvFLOQhDEK416-6nyzWMSPEnqnRWbH-E1PVfIVd-16Jy0IYut5Y57KQ02c31rApMbY-2xihtRgmqToNEUiWGZGzGnNdUqWS895mbJaSEPmQijek9s25ra6lF8BIs63yadVa-Ccf4BXs0lsd9fJnnnNlqJ6zPiDGDYTW6b_Nqx9MdAAlmtck8BgyyHmaK8f2Fpdhp-k6Ei4-fozOk2ejt_20WjAyUvRHLtcirIRy1i81rOxj3s5ec" />
         </div>
         <div class="relative z-20 mx-auto max-w-[1200px] pl-6 pr-6 w-full text-white">
             <div class="max-w-2xl">
@@ -467,3 +498,5 @@ const faqs = [
 </div>
 </main>
 </Layout>
+
+

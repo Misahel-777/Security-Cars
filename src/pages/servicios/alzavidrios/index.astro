@@ -2,6 +2,19 @@
 import Layout from '../../../layouts/Layout.astro';
 import { AlertTriangle, Zap, Gauge, Shield, House, Wrench, Cpu } from '@lucide/astro';
 
+import {
+  getServiceSchemasByKey
+} from '../../../data/services-data.js';
+
+import {
+  getLocalBusinessSchema
+} from '../../../data/schemas.js';
+
+const serviceSchemas = [
+  getLocalBusinessSchema(),
+  ...getServiceSchemasByKey('alzavidrios')
+];
+
 const service = {
     problems: [
       {
@@ -64,13 +77,31 @@ const service = {
   );
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+
+  const seo = {
+  title: "Alzavidrios Eléctricos para Auto en Lima | Security Cars La Molina",
+  description: "Reparación e instalación de alzavidrios eléctricos en La Molina. Vidrios que no suben, motores que fallan, sistemas lentos. También convertimos manuales a eléctricos. Servicio a domicilio.",
+  keywords: ["alzavidrios electricos", "elevalunas electrico", "instalación de vidrios eléctricos para autos", "reparacion de alzavidrios", "alzavidrios electricos 4 puertas", "instalación de vidrios para autos a domicilio", "precio elevalunas eléctrico", "vidrios electricos para autos", "modulo alzavidrio", "motores de vidrios electricos"],
+  image: "https://securitycars.com/img/og-alzavidrios.jpg",
+  alt: "Reparación e instalación de alzavidrios eléctricos en La Molina, Lima",
+  url: "https://securitycars.com/alzavidrios",
+  ogTitle: "¿El vidrio no sube? Lo solucionamos hoy — Security Cars La Molina",
+  ogDescription: "Reparación e instalación de alzavidrios eléctricos en La Molina. Atendemos a domicilio. Revisamos antes de reemplazar.",
+  twitterTitle: "Alzavidrios Eléctricos en Lima | Security Cars La Molina",
+  twitterDescription: "Vidrio que no sube, motor que falla, sistema lento. Lo reparamos en La Molina. Atención a domicilio. WhatsApp: 907 300 174",
+};
+
+const layoutProps = {
+  ...seo,
+  structuredData: serviceSchemas,
+  preloadImage: seo.image,
+};
 ---
 
 
 
-<Layout title="Alza vidrios Eléctricos | Security Cars"
-        description ="Solucionamos fallas en vidrios eléctricos que no suben, bajan lento o se traban. Realizamos reparación, mantenimiento e instalación con atención rápida, segura y garantizada para que tu vehículo vuelva a funcionar correctamente."
-        keywords = "alzavidrio, instalación de vidrios para autos a domicilio, elevalunas electrico, alzavidrios electricos, alza vidrios eléctrico, alzavidrios electricos 4 puertas, instalación de vidrios eléctricos, instalación de vidrios eléctricos para autos precios, instalación de vidrios eléctricos para carro, instalación vidrios eléctricos, precio elevalunas eléctrico, vidrios electricos carro, vidrios electricos para autos, vidrios electricos para carro, modulo alzavidrio">
+<Layout {...layoutProps}>
     <main class="bg-gray-50">
       {/* HERO */}
       <section class="bg-gradient-to-r from-[#0343eb] to-[#0343eb]/80 text-white py-25 px-4">

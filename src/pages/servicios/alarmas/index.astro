@@ -1,5 +1,19 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import {
+  getServiceSchemasByKey
+} from '../../../data/services-data.js';
+
+import {
+  getLocalBusinessSchema
+} from '../../../data/schemas.js';
+
+const serviceSchemas = [
+  getLocalBusinessSchema(),
+  ...getServiceSchemasByKey('alarma')
+];
+
+
 const productos = [
   {
     id: 1,
@@ -58,10 +72,28 @@ const getWhatsappLink = (producto: string) => {
 
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
+
+
+const seo = {
+  title: "Alarma para Auto en Lima | Security Cars La Molina",
+  description: "Instalamos alarmas para auto en La Molina: básica, Full Plus con antiasalto, integrada y más. Trabajo limpio, precios económicos, garantizado. Cotiza por WhatsApp.",
+  keywords: ["alarma para auto", "instalacion de alarmas para autos", "alarmas para autos precios", "instalación de alarmas para autos a domicilio", "sistema de alarma para auto", "alarma con encendido a distancia para autos", "alarma para camioneta", "sensor de golpe alarma auto", "tipos de alarmas para autos", "alarmas para vehiculos"],
+  image: "/og-alarma.webp",
+  alt: "Instalación de alarma para auto en La Molina, Lima",
+  url: "https://securitycars.com/alarma",
+  ogTitle: "Tu auto merece una alarma que de verdad funcione — Security Cars",
+  ogDescription: "Alarmas básicas y Full Plus con antiasalto en La Molina. Sin cables sueltos, sin fallas. Trabajo garantizado y precios económicos.",
+  twitterTitle: "Alarma para Auto en Lima | Security Cars La Molina",
+  twitterDescription: "Instalamos alarmas para auto en La Molina. Básica, Full Plus con antiasalto y más. WhatsApp: 907 300 174",
+};
+
+const layoutProps = {
+  ...seo,
+  structuredData: serviceSchemas,
+  preloadImage: seo.image,
+};
 ---
-<Layout title="Alarma para Auto | Security Cars"
-        description ="Protege tu vehículo con las mejores alarmas para auto. Instalación rápida, sensores de movimiento y bloqueo de motor. ¡Cotiza tu seguridad ahora!"
-        keywords = "alarmas para carro, alarma para coche, instalacion de alarmas para autos, alarma de carro, alarmas de autos, alarmas para vehiculos, instalación de alarmas para autos a domicilio, alarmas para autos precios, instalación alarma auto, instalación de alarmas para autos precios, tipo de alarmas para autos, tipos de alarma para carro, venta alarmas para autos, venta de alarmas para carro, venta e instalación de alarmas para autos">
+<Layout {...layoutProps}>
     <section class="relative h-[70vh] md:min-h-screen flex items-center">
 
       {/* imgn */}

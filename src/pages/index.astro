@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getWebSiteSchema, getLocalBusinessSchema, getOrganizationSchema} from '../data/schemas.js';
 
 
 import Hero from '../Home/Hero.astro';
@@ -8,11 +9,28 @@ import Services from '../Home/Services.astro';
 import WorkDone from '../Home/WorkDone.astro';
 import Testimonials from '../Home/Testimonials.astro';
 import Faqs from '../Home/Faqs.astro';
-import Contact from '../Home/CTA.astro';
 
+
+const seo = {
+  title: "Security Cars | Taller de Seguridad y Accesorios para Autos en Lima",
+  description: "Security Cars ofrece sistemas de seguridad, GPS, alarmas, cámaras, luces LED, alzavidrios y audio para autos en Lima Metropolitana.",
+  image: "https://securitycars.com/img/og-home.jpg",
+  url: "https://securitycars.com",
+};
+
+const structuredData = [
+  getOrganizationSchema(),
+  getLocalBusinessSchema(),
+  getWebSiteSchema(),
+];
+
+const layoutProps = {
+  ...seo,
+  structuredData,
+};
 ---
 
-<Layout>
+<Layout {...layoutProps}>
 	<main>
 		<Hero />
 		<About />
@@ -20,7 +38,6 @@ import Contact from '../Home/CTA.astro';
 		<WorkDone />
 		<Testimonials />
 		<Faqs />
-		<Contact />
 	</main>
 </Layout>
 
